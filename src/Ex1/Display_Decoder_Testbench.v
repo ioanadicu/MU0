@@ -20,17 +20,10 @@
 
 module Display_Decoder_Testbench;
 
-//  Internal signals have been defined for you
-//  and must be used for this excercise 
-//  DO NOT alter names, and ensure that your signals
-//  are wired up correctly to your design under test 
+// declare any internal signals
 
-reg  [3:0]  input_code;       
-wire [14:0] segment_pattern;
-
-// create your instance of Display_Decoder
-
-
+// create instance of Display_Decoder
+ 
 
 
 /* Comment block
