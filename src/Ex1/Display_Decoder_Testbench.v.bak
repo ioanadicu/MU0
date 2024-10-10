@@ -22,13 +22,9 @@ module Display_Decoder_Testbench;
 
 // declare any internal signals
 
-wire [14:0] output_value;
-reg  [3:0]  input_value;
-
 // create instance of Display_Decoder
  
-Display_Decoder top(.input_code(input_value),
-					.segment_pattern(output_value));
+
 
 /* Comment block
 
@@ -48,21 +44,9 @@ begin
 // Make sure you test all input combinations with a delay
 // -------------------------------------------------------
 
-#100 input_value=4'h1;
-#100 input_value=4'h2;
-#100 input_value=4'h3;
-#100 input_value=4'h4;
-#100 input_value=4'h5;
-#100 input_value=4'h6;
-#100 input_value=4'h7;
-#100 input_value=4'h8;
-#100 input_value=4'h9;
-#100 input_value=4'hA;
-#100 input_value=4'hB;
-#100 input_value=4'hC;
-#100 input_value=4'hD;
-#100 input_value=4'hE;
-#100 input_value=4'hF;
+
+
+
 
 // -------------------------------------------------------
 // Please make sure your stimulus is above this line
