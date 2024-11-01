@@ -1,6 +1,38 @@
 m255
 K4
 z2
+Z0 !s12c _opt2
+Z1 !s99 nomlopt
+Z2 !s12c _opt1
+R1
+R0
+R1
+R2
+R1
+R0
+R1
+R2
+R1
+R0
+R1
+R2
+R1
+R0
+R1
+R2
+R1
+Z3 !s12c _opt
+R1
+R0
+R1
+R2
+R1
+R0
+R1
+R2
+R1
+R3
+R1
 !s11f vlog 2023.4 2023.10, Oct  9 2023
 13
 !s112 1.1
@@ -8,82 +40,126 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/y26054md/Questa/COMP12111
+Z4 d/home/y26054md/Questa/COMP12111
+T_opt
+!s110 1730308303
+Ve2Czg<LjNIH_[@Xbz6dSQ2
+04 23 4 work Traffic_Light_Testbench fast 0
+Z5 04 4 4 GLIB glbl fast 0
+=1-00d861b44e0b-672268ce-af027-3315f
+R1
+Z6 !s12f OEM100
+Z7 !s12b OEM100
+Z8 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work Ex2 -gblso libssl.so -L unisims -L BoardLib -L Ex1 -L Ex2 -L Ex3 +acc
+Z9 tCvgOpt 0
+n@_opt
+Z10 OL;O;2023.4;77
+R4
+T_opt1
+!s110 1730476551
+VecR?zhWGIR=Xn9V?Ne^Hz3
+Z11 04 19 4 work Traffic_Light_Board fast 0
+R5
+=1-6c4b90ee21cb-6724fa05-adfa-8e3d
+R1
+R6
+R7
+R8
+o-quiet -auto_acc_if_foreign -work Ex2 -gblso libssl.so -L BoardLib -L Ex1 -L unisims -L BoardLib -L Ex1 -L Ex2 -L Ex3 +acc
+R9
+n@_opt1
+R10
+R4
+T_opt2
+!s110 1730476661
+VNd=>GfZ40WhWI?FTm3>9@3
+R11
+R5
+=1-6c4b90ee21cb-6724fa74-7833a-fb1c
+R1
+R6
+R7
+R8
+o-quiet -auto_acc_if_foreign -work Ex2 -gblso libssl.so -L BoardLib -L unisims -L BoardLib -L Ex1 -L Ex2 -L Ex3 +acc
+R9
+n@_opt2
+R10
 vTraffic_Light
 2./src/Ex2/Traffic_Light.v
-Z1 !s110 1728319138
+!s110 1730476538
 !i10b 1
-!s100 e?1[;EO`W:j7Um?g@TGcN0
-I]e7Sgb6Y39o83Y2h;I8QF1
-R0
-Z2 w1728318303
+!s100 UFLo1EZlEk=4DfJbO1^Q93
+IRF996j`K0hVoSMU2A52`[2
+R4
+w1730476395
 8./src/Ex2/Traffic_Light.v
 F./src/Ex2/Traffic_Light.v
-!i122 2
-L0 26 23
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 OL;L;2023.4;77
+!i122 34
+L0 35 68
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OL;L;2023.4;77
 r1
 !s85 0
 31
-Z5 !s108 1728319138.000000
+!s108 1730476538.000000
 !s107 ./src/Ex2/Traffic_Light.v|
 !s90 -reportprogress|300|-lint|-cover|bcsxf|./src/Ex2/Traffic_Light.v|
 !s101 -O0
 !i113 0
-Z6 !s102 -cover bcsxf
-Z7 o-O0 -lint -cover bcsxf
-Z8 tShow_source 1 DisableOpt 1 CoverOpt 1 CvgOpt 0
+Z14 !s102 -cover bcsxf
+Z15 o-O0 -lint -cover bcsxf
+Z16 tShow_source 1 DisableOpt 1 CoverOpt 1 CvgOpt 0
 n@traffic_@light
 vTraffic_Light_Board
 2./src/Ex2/Traffic_Light_Board.v
-R1
+Z17 !s110 1730476537
 !i10b 1
-!s100 a<k<>P3ZjEC:8k]e09LWF2
-I[D>>6_C`^Rd5BU_BZ56Xh3
-R0
-R2
+!s100 h:GU1Ef2[bPC?O9J3HET?1
+IJf]@CajCm`ad4X`A4;mEi1
+R4
+w1730476112
 8./src/Ex2/Traffic_Light_Board.v
 F./src/Ex2/Traffic_Light_Board.v
-!i122 0
-L0 23 96
-R3
-R4
+!i122 32
+L0 23 103
+R12
+R13
 r1
 !s85 0
 31
-R5
+!s108 1730476536.000000
 !s107 ./src/Ex2/Traffic_Light_Board.v|
 !s90 -reportprogress|300|-lint|-cover|bcsxf|./src/Ex2/Traffic_Light_Board.v|
 !s101 -O0
 !i113 0
-R6
-R7
-R8
+R14
+R15
+R16
 n@traffic_@light_@board
 vTraffic_Light_Testbench
 2./src/Ex2/Traffic_Light_Testbench.v
-R1
+R17
 !i10b 1
-!s100 9ZON>gnnB:bYK@O]MhALF1
-Inbb`^8ln]EY;YE6z5T;NG2
-R0
-R2
+!s100 T=ZXjmn9nfK3?j9l>SkmG2
+IEJfT<DPfR5F0TEGhE>m>52
+R4
+w1730476505
 8./src/Ex2/Traffic_Light_Testbench.v
 F./src/Ex2/Traffic_Light_Testbench.v
-!i122 1
-L0 20 54
-R3
-R4
+!i122 33
+L0 20 83
+R12
+R13
 r1
 !s85 0
 31
-R5
+!s108 1730476537.000000
 !s107 ./src/Ex2/Traffic_Light_Testbench.v|
 !s90 -reportprogress|300|-lint|-cover|bcsxf|./src/Ex2/Traffic_Light_Testbench.v|
 !s101 -O0
 !i113 0
-R6
-R7
-R8
+R14
+R15
+R16
 n@traffic_@light_@testbench

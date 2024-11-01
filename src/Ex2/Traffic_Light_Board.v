@@ -14,7 +14,7 @@
 //
 // Add your comments:
 //
-//
+// This module integrates the traffic light FSM with the experimental board
 //
 
 `timescale  1ns / 100ps
@@ -43,11 +43,18 @@ input wire  [5:0]   keycol_pin
 
 // Declare any internal buses and wires here (connections)
 
-
+wire [5:0] light_sequence; 	// wire for the FSM lightning output, 6 bits because lightseq, Crossing_B are 6 bits
+wire [3:0] car_sensors; 	// wire for D1 and D2, [3:0] because Simple_buttons is [3:0], will only use bits 2, 3 and 1 for the reset button
+wire Clock;					// wire for clock
 
 // Instantiatiate Trafic_Light here
 
-
+Traffic_Light TL1(	.lightseq(light_sequence),	// output from FSM to internal wire
+					.D1(car_sensors[3]),		// connecting D1 sensor to wire
+					.D2(car_sensors[2]),		// connecting D2 sensor to wire
+					.clock(Clock),				// clock wire from board connected to FSM clock input
+					.reset(car_sensors[1])		// FSM reset - we'll use one of the pedestrian buttons as a reset button for our FSM
+);
 
 // Make connections to the components on BoardV3 in the instantiation below.
 
@@ -56,11 +63,11 @@ BoardV3 BoardI1 ( // Board user pins
              .Clk_100MHz(),
              .Clk_25MHz(), 
 	         .Clk_1kHz(),
-	         .Clk_1Hz(),
-             .Simple_buttons(),	     
+	         .Clk_1Hz(Clock),					// connecting to the clock wire
+             .Simple_buttons(car_sensors),	    // connecting Simple_buttons[] to car_sensors wire
              .button(),
-	     // inputs - must be connected	     	     
-	         .Crossing_B(6'b00_0000),
+	    	 // inputs - must be connected	       
+	         .Crossing_B(light_sequence), 		// connecting Crossing_B lights to the outputs wire
              .Crossing_A(5'b0_0000), 
 	         .Buzzer(1'b0),
 	         .S7_leds(2'b00),

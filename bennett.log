@@ -67,3 +67,761 @@
  - 587084 [info] Writing sector 50 total size 65537
  - 587084 [info] Board said: P
  - 587084 [info] Starting warm boot 
+ - 91043 [info] Starting STUMP Loader
+ - 91043 [info] No serial port specified
+ - 91043 [info] Searching for ports...
+ - 91043 [info] Found ttyUSB0
+ - 91043 [info] Found ttyS4
+ - 91043 [info] Found ttyS0
+ - 91043 [info] Using ttyUSB0
+ - 91043 [info] Port ttyUSB0
+ - 91043 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 91043 [info] Sectors to upload: 19
+ - 91043 [info] File size bytes: 1241804
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 32 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 33 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 34 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 35 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 36 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 37 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 38 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 39 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 40 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 41 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 42 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 43 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 44 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 45 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 46 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 47 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 48 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 49 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Board said: R
+ - 91043 [info] Writing sector 50 total size 65537
+ - 91043 [info] Board said: P
+ - 91043 [info] Starting warm boot 
+ - 119217 [info] Starting STUMP Loader
+ - 119217 [info] No serial port specified
+ - 119217 [info] Searching for ports...
+ - 119217 [info] Found ttyUSB0
+ - 119217 [info] Found ttyS4
+ - 119217 [info] Found ttyS0
+ - 119217 [info] Using ttyUSB0
+ - 119217 [info] Port ttyUSB0
+ - 119217 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 119217 [info] Sectors to upload: 19
+ - 119217 [info] File size bytes: 1241804
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 32 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 33 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 34 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 35 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 36 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 37 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 38 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 39 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 40 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 41 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 42 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 43 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 44 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 45 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 46 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 47 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 48 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 49 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Board said: R
+ - 119217 [info] Writing sector 50 total size 65537
+ - 119217 [info] Board said: P
+ - 119217 [info] Starting warm boot 
+ - 159141 [info] Starting STUMP Loader
+ - 159141 [info] No serial port specified
+ - 159141 [info] Searching for ports...
+ - 159141 [info] Found ttyUSB0
+ - 159141 [info] Found ttyS4
+ - 159141 [info] Found ttyS0
+ - 159141 [info] Using ttyUSB0
+ - 159141 [info] Port ttyUSB0
+ - 159141 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 159141 [info] Sectors to upload: 19
+ - 159141 [info] File size bytes: 1241804
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 32 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 33 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 34 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 35 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 36 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 37 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 38 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 39 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 40 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 41 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 42 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 43 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 44 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 45 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 46 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 47 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 48 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 49 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Board said: R
+ - 159141 [info] Writing sector 50 total size 65537
+ - 159141 [info] Board said: P
+ - 159141 [info] Starting warm boot 
+ - 160778 [info] Starting STUMP Loader
+ - 160778 [info] No serial port specified
+ - 160778 [info] Searching for ports...
+ - 160778 [info] Found ttyUSB0
+ - 160778 [info] Found ttyS4
+ - 160778 [info] Found ttyS0
+ - 160778 [info] Using ttyUSB0
+ - 160778 [info] Port ttyUSB0
+ - 160778 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 160778 [info] Sectors to upload: 19
+ - 160778 [info] File size bytes: 1241804
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 32 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 33 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 34 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 35 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 36 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 37 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 38 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 39 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 40 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 41 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 42 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 43 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 44 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 45 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 46 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 47 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 48 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 49 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Board said: R
+ - 160778 [info] Writing sector 50 total size 65537
+ - 160778 [info] Board said: P
+ - 160778 [info] Starting warm boot 
+ - 208027 [info] Starting STUMP Loader
+ - 208027 [info] No serial port specified
+ - 208027 [info] Searching for ports...
+ - 208027 [info] Found ttyUSB0
+ - 208027 [info] Found ttyS4
+ - 208027 [info] Found ttyS0
+ - 208027 [info] Using ttyUSB0
+ - 208027 [info] Port ttyUSB0
+ - 208027 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 208027 [info] Sectors to upload: 19
+ - 208027 [info] File size bytes: 1241804
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 32 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 33 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 34 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 35 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 36 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 37 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 38 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 39 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 40 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 41 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 42 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 43 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 44 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 45 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 46 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 47 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 48 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 49 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Board said: R
+ - 208027 [info] Writing sector 50 total size 65537
+ - 208027 [info] Board said: P
+ - 208027 [info] Starting warm boot 
+ - 31859 [info] Starting STUMP Loader
+ - 31859 [info] No serial port specified
+ - 31859 [info] Searching for ports...
+ - 31859 [info] Found ttyUSB0
+ - 31859 [info] Found ttyS4
+ - 31859 [info] Found ttyS0
+ - 31859 [info] Using ttyUSB0
+ - 31859 [info] Port ttyUSB0
+ - 31859 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 31859 [info] Sectors to upload: 19
+ - 31859 [info] File size bytes: 1241804
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 32 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 33 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 34 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 35 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 36 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 37 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 38 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 39 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 40 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 41 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 42 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 43 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 44 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 45 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 46 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 47 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 48 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 49 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Board said: R
+ - 31859 [info] Writing sector 50 total size 65537
+ - 31859 [info] Board said: P
+ - 31859 [info] Starting warm boot 
+ - 60256 [info] Starting STUMP Loader
+ - 60256 [info] No serial port specified
+ - 60256 [info] Searching for ports...
+ - 60256 [info] Found ttyUSB0
+ - 60256 [info] Found ttyS4
+ - 60256 [info] Found ttyS0
+ - 60256 [info] Using ttyUSB0
+ - 60256 [info] Port ttyUSB0
+ - 60256 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 60256 [info] Sectors to upload: 19
+ - 60256 [info] File size bytes: 1241804
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 32 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 33 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 34 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 35 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 36 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 37 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 38 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 39 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 40 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 41 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 42 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 43 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 44 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 45 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 46 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 47 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 48 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 49 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Board said: R
+ - 60256 [info] Writing sector 50 total size 65537
+ - 60256 [info] Board said: P
+ - 60256 [info] Starting warm boot 
+ - 150606 [info] Starting STUMP Loader
+ - 150606 [info] No serial port specified
+ - 150606 [info] Searching for ports...
+ - 150606 [info] Found ttyUSB0
+ - 150606 [info] Found ttyS4
+ - 150606 [info] Found ttyS0
+ - 150606 [info] Using ttyUSB0
+ - 150606 [info] Port ttyUSB0
+ - 150606 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 150606 [info] Sectors to upload: 19
+ - 150606 [info] File size bytes: 1241804
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 32 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 33 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 34 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 35 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 36 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 37 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 38 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 39 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 40 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 41 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 42 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 43 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 44 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 45 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 46 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 47 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 48 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 49 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Board said: R
+ - 150606 [info] Writing sector 50 total size 65537
+ - 150606 [info] Board said: P
+ - 150606 [info] Starting warm boot 
+ - 218734 [info] Starting STUMP Loader
+ - 218734 [info] No serial port specified
+ - 218734 [info] Searching for ports...
+ - 218734 [info] Found ttyUSB0
+ - 218734 [info] Found ttyS4
+ - 218734 [info] Found ttyS0
+ - 218734 [info] Using ttyUSB0
+ - 218734 [info] Port ttyUSB0
+ - 218734 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 218734 [info] Sectors to upload: 19
+ - 218734 [info] File size bytes: 1241804
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 32 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 33 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 34 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 35 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 36 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 37 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 38 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 39 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 40 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 41 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 42 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 43 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 44 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 45 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 46 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 47 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 48 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 49 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Board said: R
+ - 218734 [info] Writing sector 50 total size 65537
+ - 218734 [info] Board said: P
+ - 218734 [info] Starting warm boot 
+ - 279674 [info] Starting STUMP Loader
+ - 279674 [info] No serial port specified
+ - 279674 [info] Searching for ports...
+ - 279674 [info] Found ttyUSB0
+ - 279674 [info] Found ttyS4
+ - 279674 [info] Found ttyS0
+ - 279674 [info] Using ttyUSB0
+ - 279674 [info] Port ttyUSB0
+ - 279674 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 279674 [info] Sectors to upload: 19
+ - 279674 [info] File size bytes: 1241804
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 32 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 33 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 34 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 35 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 36 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 37 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 38 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 39 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 40 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 41 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 42 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 43 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 44 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 45 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 46 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 47 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 48 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 49 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Board said: R
+ - 279674 [info] Writing sector 50 total size 65537
+ - 279674 [info] Board said: P
+ - 279674 [info] Starting warm boot 
+ - 64390 [info] Starting STUMP Loader
+ - 64390 [info] No serial port specified
+ - 64390 [info] Searching for ports...
+ - 64390 [info] Found ttyUSB0
+ - 64390 [info] Found ttyS0
+ - 64390 [info] Using ttyUSB0
+ - 64390 [info] Port ttyUSB0
+ - 64390 [info] File /home/y26054md/Questa/COMP12111/synthesis/Traffic_Light_Board/Traffic_Light_Board.bin
+ - 64390 [info] Sectors to upload: 19
+ - 64390 [info] File size bytes: 1241804
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 32 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 33 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 34 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 35 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 36 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 37 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 38 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 39 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 40 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 41 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 42 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 43 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 44 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 45 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 46 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 47 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 48 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 49 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Board said: R
+ - 64390 [info] Writing sector 50 total size 65537
+ - 64390 [info] Board said: P
+ - 64390 [info] Starting warm boot 

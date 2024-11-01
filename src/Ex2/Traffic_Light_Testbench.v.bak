@@ -1,0 +1,104 @@
+// COMP12111 Exercise 2 - Sequential Design Testbench
+//
+// Version 2024. P W Nutter
+//
+// This is the Verilog module for the traffic light testbench
+// Tests for the traffic light should be added to this file
+//
+// Make sure you document your code and marks may be awarded/lost for the 
+// quality of the comments given.
+//
+// Add your comments:
+//
+// This module is used for testing the traffic light FSM implementation.
+//
+
+`timescale  1ns / 100ps
+`default_nettype none
+
+
+module Traffic_Light_Testbench;
+ 
+//  Internal signals have been defined for you
+//  and must be used for this excercise 
+//  DO NOT alter names, and ensure that your signals
+//  are wired up correctly to your design under test 
+
+wire [5:0]  lightseq; 
+reg   clock;
+reg   reset;
+reg   D1;
+reg   D2;
+
+// The design has been instantiated for you below:
+
+Traffic_Light top(.clock(clock), .reset(reset), .D1(D1), .D2(D2), .lightseq(lightseq));
+
+
+//
+// Testing of a sequential design requires you to implement
+// a clock - see the advice in Blackboard on how to do this
+//
+
+/*
+
+#VALUE      creates a delay of VALUE ns
+a=VALUE;    sets the value of input 'a' to VALUE
+$stop;      tells the simulator to stop
+
+*/
+
+// Implement your clock here
+// -----------------------------------------------------
+
+// following instructions from figure 6 page 0
+initial clock = 1'b0;	// initialise clock to 0 at time 0
+
+// the following always block creates the clock signal, period is 2 x 50ns = 100ns
+always					// always do the following
+begin
+	#50					// wait half a clock period
+	clock = ~clock;		// invert the clock (~ is a binary NOT operation)
+end
+
+// -----------------------------------------------------
+
+
+initial
+begin
+
+// Set input signals here, using delays where appropriate
+// -----------------------------------------------------
+
+# 100	// this inserts a delay of 100ns
+
+D1 = 1'b0;	// set D1 to 0 initially
+D2 = 1'b0;	// set D2 to 0 initially
+#1000 		// run for a period of time
+
+D1 = 1'b1;	// cars are waiting at D1
+#1000		// run for a period of time
+
+D1 = 1'b0;	// all cars detected by D1 have passed
+#1000		// run for a period of time
+
+D2 = 1'b1;	// cars are waiting at D2
+#1000		// run for a period of time
+
+D2 = 1'b0;	// all cars detected by D2 have passed
+#1000		// run for a period of time
+
+D1 = 1'b1;	// cars are waiting at D1
+D2 = 1'b1;	// cars are waiting at D2
+#1000		// run for a period of time
+
+D1 = 1'b0;	// all cars detected by D1 have passed
+D2 = 1'b0;	// all cars detected by D2 have passed
+#1000		// run for a period of time
+
+#100 $stop;
+end
+
+endmodule
+
+`default_nettype wire

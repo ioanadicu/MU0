@@ -10,7 +10,7 @@
 //
 // Add your comments:
 //
-//
+// This module is used for testing the traffic light FSM implementation.
 //
 
 `timescale  1ns / 100ps
@@ -51,9 +51,15 @@ $stop;      tells the simulator to stop
 // Implement your clock here
 // -----------------------------------------------------
 
+// following instructions from figure 6 page 10
+initial clock = 1'b0;	// initialise clock to 0 at time 0
 
-
-
+// the following always block creates the clock signal, period is 2 x 50ns = 100ns
+always					// always do the following
+begin
+	#50					// wait half a clock period
+	clock = ~clock;		// invert the clock (~ is a binary NOT operation)
+end
 
 // -----------------------------------------------------
 
@@ -64,8 +70,31 @@ begin
 // Set input signals here, using delays where appropriate
 // -----------------------------------------------------
 
+# 100	// this inserts a delay of 100ns
 
+D1 = 1'b0;	// set D1 to 0 initially
+D2 = 1'b0;	// set D2 to 0 initially
+#1000 		// run for a period of time
 
+D1 = 1'b1;	// cars are waiting at D1
+#1000		// run for a period of time
+
+D1 = 1'b0;	// all cars detected by D1 have passed
+#1000		// run for a period of time
+
+D2 = 1'b1;	// cars are waiting at D2
+#1000		// run for a period of time
+
+D2 = 1'b0;	// all cars detected by D2 have passed
+#1000		// run for a period of time
+
+D1 = 1'b1;	// cars are waiting at D1
+D2 = 1'b1;	// cars are waiting at D2
+#1000		// run for a period of time
+
+D1 = 1'b0;	// all cars detected by D1 have passed
+D2 = 1'b0;	// all cars detected by D2 have passed
+#1000		// run for a period of time
 
 #100 $stop;
 end
