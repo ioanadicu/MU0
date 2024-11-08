@@ -35,7 +35,7 @@ begin
 		2'b01:	Q = X + Y;
 		2'b10:	Q = X + 1;
 		2'b11:	Q = X + (~Y + 1);	// we're doing the substraction using two's complement according to instructions
-		default: Q = 16'bxxxx_xxxx_xxxx_xxxx; // default case for good practice
+		default: Q = 16'b0000_0000_0000_0000; // default case for good practice
 	endcase
 end
 
