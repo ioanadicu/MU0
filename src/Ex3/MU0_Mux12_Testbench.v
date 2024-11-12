@@ -7,9 +7,11 @@
 //
 // Comments:
 //
-// This code uses the MU0_Alu_Testbench as an example
 // Testing pairs of inputs, covering unknown modes and different number combinations
 // for each S input.
+// 
+// All unused inputs set to X.
+// Xs will tend to propagate and expose faults in digital simulations
 //
 
 // Do not touch the following lines as they required for simulation 
@@ -45,22 +47,28 @@ begin
 // Enter you stimulus below this line
 // -------------------------------------------------------
 
-	S = 1'bx; 		// Unknown mode
-	A = 12'hxxx; 	// h = hexadecimal, each sets 4 bits to x; 12 / 4 = 3 => we need 3 x's
+	S = 1'bx; 			// Unknown mode
+	A = 12'hxxx; 	
 	B = 12'hxxx; 
 	// Expect Q = 12'hxxx
 	
 	#100;
-	S = 0;			// Q = A mode
+	S = 1'b0;			// Q = A mode
 	A = 12'h222;
-	B = 12'h333;
+	B = 12'hxxx;
 	// Expect Q = 12'h222
 
 	#100;
-	S = 1;			// Q = B mode
-	A = 12'h111;
+	S = 1'b1;			// Q = B mode
+	A = 12'hxxx;
 	B = 12'h444;
 	// Expect Q = 12'h444
+
+	#100;
+	S = 1'bx; 			// Unknown mode
+	A = 12'hxxx; 	
+	B = 12'hxxx; 
+	// Expect Q = 12'hxxx
 
 // -------------------------------------------------------
 // Please make sure your stimulus is above this line

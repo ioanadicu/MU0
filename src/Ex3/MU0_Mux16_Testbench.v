@@ -7,7 +7,11 @@
 //
 // Comments:
 //
-//
+// Testing pairs of inputs, covering unknown modes and different number combinations
+// for each S input.
+// 
+// All unused inputs set to X.
+// Xs will tend to propagate and expose faults in digital simulations
 //
 
 // Do not touch the following lines as they required for simulation 
@@ -43,9 +47,28 @@ begin
 // Enter you stimulus below this line
 // -------------------------------------------------------
 
+	S = 1'bx; 			// Unknown mode
+	A = 16'hxxxx; 	
+	B = 16'hxxxx; 
+	// Expect Q = 12'hxxxx
+	
+	#100;
+	S = 1'b0;			// Q = A mode
+	A = 16'h2222;
+	B = 16'hxxxx;
+	// Expect Q = 12'h2222
 
+	#100;
+	S = 1'b1;			// Q = B mode
+	A = 16'hxxxx;
+	B = 16'h4444;
+	// Expect Q = 12'h4443
 
-
+	#100;
+	S = 1'bx; 			// Unknown mode
+	A = 16'hxxxx; 	
+	B = 16'hxxxx; 
+	// Expect Q = 12'hxxxx
 
 // -------------------------------------------------------
 // Please make sure your stimulus is above this line

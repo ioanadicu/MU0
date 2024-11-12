@@ -7,7 +7,10 @@
 //
 // Comments:
 //
-//
+// According to Table 3: Operation of the 12-bit 2-to-1 mux, we implement the following cases:
+// S = 0 -> output A
+// S = 1 -> output B
+// We will use Q for the output
 //
 
 // Do not touch the following line it is required for simulation 
@@ -28,11 +31,11 @@ output reg  [11:0] Q);
 // Combinatorial logic for 2to1 multiplexor
 // S is select, A channel0, B channel1
 
-
-
-
-
-
+always @(*) // asynchronous (w/o global clock), combinatorial (the output depends on current inputs), we use = blocking assignment
+begin
+	if (S == 1'b0)	Q = A; // if S = 0 we output A
+	else 			Q = B; // else (S = 1) we output B
+end
 
 
 endmodule 

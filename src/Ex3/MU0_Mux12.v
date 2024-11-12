@@ -7,10 +7,13 @@
 //
 // Comments:
 //
-// According to Table 3: Operation of the 12-bit 2-to-1 mux, we implement the following cases:
-// S = 0 -> output A
-// S = 1 -> output B
-// We will use Q for the output
+// This Verilog module implements a 12-bit 2-to-1 multiplexer for the MU0 processor. It takes two 12-bit inputs
+// and selects one of them as the output based on a single-bit select signal (S). The module has the
+// following ports:
+// 	- A = 12-bit input
+//	- B = 12-bit input
+//	- S = 1-bit control signal to select which of the two inputs is connected to the output
+//	- Q = 12-bit output that is connected to one of the inputs
 //
 
 // Do not touch the following line it is required for simulation 

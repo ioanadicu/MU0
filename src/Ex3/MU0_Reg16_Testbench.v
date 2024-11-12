@@ -7,8 +7,8 @@
 //
 // Comments:
 //
-//
-//
+// Testing pairs of inputs, covering unknown modes and different number combinations of the signals.
+// 
 
 // Do not touch the following lines as they required for simulation 
 `timescale  1ns / 100ps
@@ -42,15 +42,48 @@ $stop;      tells the simulator to stop
 
 // Clk setup
 
+initial Clk = 1'b0;	// initialise clock to 0 at time 0
+
+// the following always block creates the clock signal, period is 2 x 50ns = 100ns
+always					// always do the following
+begin
+	#50					// wait half a clock period
+	Clk = ~Clk;		// invert the clock (~ is a binary NOT operation)
+end
 
 initial
 begin
 // Enter you stimulus below this line
 // -------------------------------------------------------
 
+	Reset = 1'bx; // Unknown mode
+	En = 1'bx;
+	D = 16'hxxxx;
+	// Expect Q = 16'hxxxx
 
+	#100; // Reset high, En low
+	Reset = 1'b1;
+	En = 1'b0;
+	D = 16'h1111;
+	// Expect Q = 16'h0000
 
+	#100; // Reset high, En high (reset should be prioritized)
+	Reset = 1'b1;
+	En = 1'b1;
+	D = 16'h1111;
+	// Expect Q = 16'h0000
 
+	#100; // Reset low, En high
+	Reset = 1'b0;
+	En = 1'b1;
+	D = 16'h2222;
+	// Expect Q = 16'h2222
+
+	#100; // Reset low, En low
+	Reset = 1'b0;
+	En = 1'b0;
+	D = 16'h3333;
+	// Expect Q = 16'h2222
 
 // -------------------------------------------------------
 // Please make sure your stimulus is above this line

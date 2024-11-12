@@ -7,7 +7,7 @@
 //
 // Comments:
 //
-//
+// Creating the clock, adding a reset and running the clock for long enough to make sure it's working.
 //
 
 // Do not touch the following lines as they required for simulation 
@@ -71,14 +71,25 @@ MU0_Memory MEM1 (
 
 // set up the clock
 
+initial Clk = 1'b0;	// initialise clock to 0 at time 0
 
+// the following always block creates the clock signal, period is 2 x 50ns = 100ns
+always					// always do the following
+begin
+	#50					// wait half a clock period
+	Clk = ~Clk;		// invert the clock (~ is a binary NOT operation)
+end
 
 // Perform a reset action of MU0
 initial
 begin
+	#50;
+	Reset = 1'b1; // Reset high
+	#100;
+	Reset = 1'b0; // Reset low
 
-
-
+	#3500; // Run for a period of time
+	
 #100 $stop(); // stop the simulation - could tie this to the Halted signal going high
 end
  

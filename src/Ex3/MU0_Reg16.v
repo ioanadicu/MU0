@@ -7,7 +7,14 @@
 //
 // Comments:
 //
-//
+// This Verilog module implements a 16-bit register for the MU0 Processor. It is updated at every rising edge of the clock
+// when the Clock Enable Input is hight. It also features a asynchronous Reset which clears the output Q to 0. This module 
+// has the following ports:
+//	- Clk = the clock input to the register
+//	- Reset = the reset input to the register
+//	- En = clock enable input to the register
+//	- D = 16-bit data input
+//	- Q = 16-bit output representing the 12-bit value stored in the register
 //
 
 // Do not touch the following line it is required for simulation 
@@ -24,16 +31,17 @@ input  wire        Reset,
 input  wire        En, 
 input  wire [15:0] D, 
 output reg  [15:0] Q
- );
+);
 
 // behavioural code - clock driven
 
-
-
-
-
-
-
+always @(posedge Clk, posedge Reset)
+begin
+	if(Reset)
+		Q <= 16'h0000; // Resets Q to 0 when asynchronous Reset input is high
+	else if(En)
+		Q <= D; // On the rising edge of Clk, if En is high, the value of D is loaded into the register and Q is updated with its value
+end
 
 
 endmodule 
