@@ -17,7 +17,7 @@
 //
 // Add your comments:
 //
-// This file defines the behaviour of a traffic light junction as a FSM, using a 3-box model
+// This module defines the behaviour of a traffic light junction as a FSM, using a 3-box model
 //
 
 `timescale  1ns / 100ps

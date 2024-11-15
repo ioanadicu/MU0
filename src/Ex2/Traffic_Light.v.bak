@@ -87,7 +87,7 @@ end
 always @ (*) // combinatoriaial, asynchronous, we use = blocking assignment
 begin
 	case (current_state)
-		4'b0000, 4'b1000: lightseq = `R__R__;	// states 0, 8
+		4'b0000, 4'b1000: lightseq = `R__R__;		// states 0, 8
 		4'b0001: lightseq = `RA_R__;				// state 1
 		4'b0010, 4'b0011, 4'b0100, 4'b0101, 4'b0110: lightseq = `__GR__;	// states 2-6
 		4'b0111: lightseq = `_A_R__;				// state 7

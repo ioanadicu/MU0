@@ -51,56 +51,69 @@ wire [15:0] ALU;
 
 //MU0 registers
 
+// Accumulator
+// Making use of the MU0_Reg16 module we developed, the Accumulator stores the result of ALU operations.
 MU0_Reg16 ACCReg (
 	.Clk(Clk),
 	.Reset(Reset),
 	.En(Acc_En),
-	.D(ALU),
+	.D(ALU), // Full 16-bit ALU output is stored in the Accumulator
 	.Q(Acc)
 );
 
+// Program Counter (PC)
+// Making use of MU0_Reg12 module we developed, the PC stores the current instruction address.
 MU0_Reg12 PCReg (
 	.Clk(Clk),
 	.Reset(Reset),
 	.En(PC_En),
-	.D(ALU[11:0]),
+	.D(ALU[11:0]), // Only the lower 12 bits of the ALU output are used for the PC
 	.Q(PC)
 );
 
+// Instruction Register (IR)
+// Making use of the MU0_Reg16 module, the IR holds the current instruction fetched from memory.
 MU0_Reg16 IRReg (
 	.Clk(Clk),
 	.Reset(Reset),
 	.En(IR_En),
-	.D(Din),
+	.D(Din),	// The instruction is loaded from the memory input
 	.Q(IR)
 );
 
+
 // MU0 multiplexors
 
+// X Multiplexer
+// Making use of the MU0_Mux16 module, this selects between the Accumulator and {4'b0000, PC[11:0]} for the ALU's X input
 MU0_Mux16 XMux (
 	.A(Acc),
-	.B({4'b0000, PC[11:0]}),
+	.B({4'b0000, PC[11:0]}), // Concatenate 4 zeros with PC to form a 16-bit input
 	.S(X_sel),
-	.Q(X)
+	.Q(X)	// Output connected to ALU input X
 );
 
+// Y Multiplexer
+// Making use of the MU0_Mux16 module, this selects between the IR and the external data input (Din) for the ALU's Y input
 MU0_Mux16 YMux (
 	.A(Din),
 	.B(IR),
 	.S(Y_sel),
-	.Q(Y)
+	.Q(Y)	// Output connected to ALU input X
 );
 
+// Address Multiplexer
+// Making use of the MU0_Mux12 module, this selects between the PC and the lower 12 bits of the IR for the Adress output
 MU0_Mux12 AddrMux (
 	.A(PC),
-	.B(IR[11:0]),
+	.B(IR[11:0]),	// Lower 12 bits of IR
 	.S(Addr_sel),
-	.Q(Address)
+	.Q(Address)		// Output connected to Address
 );
 
 
 // MU0 ALU
-
+// Making use of the MU0_Alu module, this performs operations on inputs X and Y based on the 2-bit M
 MU0_Alu MU0_ALU (
 	.X(X),
 	.Y(Y),
@@ -110,7 +123,7 @@ MU0_Alu MU0_ALU (
 
 
 // MU0 Flag generation
-
+// Making use of the MU0_Flags module, the Negative flag (N) is set if the Accumulator is negative, the Zero flag (Z) is set if all bits of Acc are 0
 MU0_Flags FLAGS (
 	.Acc(Acc),
 	.N(N),

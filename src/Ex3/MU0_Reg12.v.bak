@@ -7,7 +7,14 @@
 //
 // Comments:
 //
-//
+// This Verilog module implements a 12-bit register for the MU0 Processor. It is updated at every rising edge of the clock
+// when the Clock Enable Input is hight. It also features a asynchronous Reset which clears the output Q to 0. This module 
+// has the following ports:
+//	- Clk = the clock input to the register
+//	- Reset = the reset input to the register
+//	- En = clock enable input to the register
+//	- D = 12-bit data input
+//	- Q = 12-bit output representing the 12-bit value stored in the register
 //
 
 // Do not touch the following line it is required for simulation 
@@ -31,9 +38,9 @@ output reg  [11:0] Q
 always @(posedge Clk, posedge Reset)
 begin
 	if(Reset)
-		Q <= 12'b0000_0000_0000;
+		Q <= 12'h000; // Resets Q to 0 when asynchronous Reset input is high
 	else if(En)
-		Q <= D;
+		Q <= D; // On the rising edge of Clk, if En is high, the value of D is loaded into the register and Q is updated with its value
 end
 
 

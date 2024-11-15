@@ -62,7 +62,7 @@ begin
 	S = 1'b1;			// Q = B mode
 	A = 16'hxxxx;
 	B = 16'h4444;
-	// Expect Q = 12'h4443
+	// Expect Q = 12'h4444
 
 	#100;
 	S = 1'bx; 			// Unknown mode

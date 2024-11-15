@@ -51,7 +51,7 @@ $stop;      tells the simulator to stop
 // Implement your clock here
 // -----------------------------------------------------
 
-// following instructions from figure 6 page 0
+// following instructions from figure 6 page 10
 initial clock = 1'b0;	// initialise clock to 0 at time 0
 
 // the following always block creates the clock signal, period is 2 x 50ns = 100ns

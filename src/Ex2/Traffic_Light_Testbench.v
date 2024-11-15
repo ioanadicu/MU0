@@ -96,6 +96,11 @@ D1 = 1'b0;	// all cars detected by D1 have passed
 D2 = 1'b0;	// all cars detected by D2 have passed
 #1000		// run for a period of time
 
+reset = 1'b1;	// reset high
+#50				// wait for a period of time
+reset = 1'b0;	// reset low
+#1000			// run for a period of time
+
 #100 $stop;
 end
 

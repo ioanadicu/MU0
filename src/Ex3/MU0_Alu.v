@@ -31,10 +31,10 @@ module MU0_Alu (
 always @(*) // asynchronous (w/o global clock), combinatorial (the output depends on current inputs), we use = blocking assignment
 begin
 	case(M) // the operation depends on the status of the 2-bit control signal M
-		2'b00:	Q = Y;
-		2'b01:	Q = X + Y;
-		2'b10:	Q = X + 1;
-		2'b11:	Q = X + (~Y + 1);	// we're doing the substraction using two's complement according to instructions
+		2'b00:	Q = Y;	// if M is 00 output Y
+		2'b01:	Q = X + Y;	// if M is 01 output X + Y
+		2'b10:	Q = X + 1;	// if M is 10 output X + 1
+		2'b11:	Q = X + (~Y + 1);	// if M is 11 output X - Y: we're doing the substraction using two's complement according to instructions
 		default: Q = 16'bxxxx_xxxx_xxxx_xxxx; // default case for good practice
 	endcase
 end

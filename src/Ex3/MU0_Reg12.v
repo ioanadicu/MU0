@@ -35,7 +35,8 @@ output reg  [11:0] Q
 
 // behavioural code - clock driven
 
-always @(posedge Clk, posedge Reset)
+always @(posedge Clk, posedge Reset) // even if it is synchronous it acts asynchronously because of the reset, we use <= non-blocking assignment. sequential(depends on both current inputs and past states)
+
 begin
 	if(Reset)
 		Q <= 12'h000; // Resets Q to 0 when asynchronous Reset input is high
