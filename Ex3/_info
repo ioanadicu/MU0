@@ -1,17 +1,17 @@
 m255
 K4
 z2
-Z0 !s12c _opt2
+Z0 !s12c _opt1
 Z1 !s99 nomlopt
-Z2 !s12c _opt1
+Z2 !s12c _opt
+R1
+Z3 !s12c _opt2
 R1
 R0
 R1
-Z3 !s12c _opt
+R3
 R1
 R2
-R1
-R0
 R1
 R0
 R1
@@ -21,9 +21,9 @@ R3
 R1
 R2
 R1
-R0
-R1
 R2
+R1
+R0
 R1
 R3
 R1
@@ -32,6 +32,10 @@ R1
 R2
 R1
 R3
+R1
+R0
+R1
+R2
 R1
 !s11f vlog 2023.4 2023.10, Oct  9 2023
 13
@@ -42,49 +46,49 @@ R1
 cModel Technology
 Z4 d/home/y26054md/Questa/COMP12111
 T_opt
-!s110 1731427508
-VKiV<YWg?gRGiJECY;CdXW0
-04 19 4 work MU0_Reg16_Testbench fast 0
-Z5 04 4 4 GLIB glbl fast 0
-=1-00d861b461e7-67337cb3-4dbc6-375be2
+!s110 1731433540
+VHO1ITIWk__^^3I``ghoiV3
+Z5 04 9 4 work MU0_Board fast 0
+Z6 04 4 4 GLIB glbl fast 0
+=1-6c4b90ee216d-67339442-a0f5f-109b7b
 R1
-Z6 !s12f OEM100
-Z7 !s12b OEM100
-Z8 !s124 OEM100
-Z9 o-quiet -auto_acc_if_foreign -work Ex3 -gblso libssl.so -L unisims -L BoardLib -L Ex1 -L Ex2 -L Ex3 +acc
+Z7 !s12f OEM100
+Z8 !s12b OEM100
+Z9 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work Ex3 -gblso libssl.so -L BoardLib -L Ex1 -L unisims -L BoardLib -L Ex1 -L Ex2 -L Ex3 +acc
 Z10 tCvgOpt 0
 n@_opt
 Z11 OL;O;2023.4;77
 R4
 T_opt1
-!s110 1731431328
-V3fjLblb8W]W0fc5G=Md=N0
-04 19 4 work MU0_Mux12_Testbench fast 0
+!s110 1731433639
+VVRXfeI]nA[bF_Q@Fj4mk>3
 R5
-=1-00d861b461e7-67338b9f-15667-38b352
-R1
 R6
+=1-6c4b90ee216d-673394a6-bd0de-112cdc
+R1
 R7
 R8
 R9
+o-quiet -auto_acc_if_foreign -work Ex3 -gblso libssl.so -L BoardLib -L unisims -L BoardLib -L Ex1 -L Ex2 -L Ex3 +acc
 R10
 n@_opt1
 R11
-R4
 T_opt2
 !s110 1731432924
 Vl_zX7aFWEYGj9Zj954Gbb2
 04 13 4 work MU0_Testbench fast 0
-R5
+R6
 =1-00d861b461e7-673391db-36090-395322
 R1
-R6
 R7
 R8
 R9
+o-quiet -auto_acc_if_foreign -work Ex3 -gblso libssl.so -L unisims -L BoardLib -L Ex1 -L Ex2 -L Ex3 +acc
 R10
 n@_opt2
 R11
+R4
 vMU0
 2./src/Ex3/MU0.v
 Z12 !s110 1731432915
