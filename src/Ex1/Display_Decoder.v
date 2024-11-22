@@ -27,17 +27,17 @@ module Display_Decoder (input wire  [3:0]  input_code,       // bcd input
 always @ (*)
 begin
   case(input_code)
-	4'b0000: segment_pattern = 15'b000_1100_0011_1111;
-	4'b0001: segment_pattern = 15'b000_0100_0000_0110;
-	4'b0010: segment_pattern = 15'b000_0000_1101_1011;
-	4'b0011: segment_pattern = 15'b000_0000_1100_1111;
-	4'b0100: segment_pattern = 15'b000_0000_1110_0110;
-	4'b0101: segment_pattern = 15'b000_0000_1110_1101;
-	4'b0110: segment_pattern = 15'b000_0000_1111_1101;
-	4'b0111: segment_pattern = 15'b001_0100_0000_0001;
-	4'b1000: segment_pattern = 15'b000_0000_1111_1111;
-	4'b1001: segment_pattern = 15'b000_0000_1110_1111;
-	default: segment_pattern = 15'b000_0000_0000_0000;
+	4'b0000: segment_pattern = 15'b000_1100_0011_1111;0
+	4'b0001: segment_pattern = 15'b000_0100_0000_0110;1
+	4'b0010: segment_pattern = 15'b000_0000_1101_1011;2
+	4'b0011: segment_pattern = 15'b000_0000_1100_1111;3
+	4'b0100: segment_pattern = 15'b000_0000_1110_0110;4
+	4'b0101: segment_pattern = 15'b000_0000_1110_1101;5
+	4'b0110: segment_pattern = 15'b000_0000_1111_1101;6
+	4'b0111: segment_pattern = 15'b001_0100_0000_0001;7
+	4'b1000: segment_pattern = 15'b000_0000_1111_1111;8
+	4'b1001: segment_pattern = 15'b000_0000_1110_1111;9
+	default: segment_pattern = 15'b000_0000_0000_0000;off
   endcase
 end
 

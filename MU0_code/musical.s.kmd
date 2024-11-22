@@ -1,0 +1,1078 @@
+KMD
+00000000:       ; ; MU0 Piano
+00000000:       ; ; 
+00000000:       ; ; This program reads user input from a keypad and displays corresponding 
+00000000:       ; ; digits on a multi-segment display. The user can press the numeric keys 
+00000000:       ; ; for different features. 
+00000000:       ; ;
+00000000:       ; ; Key Mapping:
+00000000:       ; ; - Keys '1', '2', '3': Play different preset songs.
+00000000:       ; ; - Keys '0' and '4' to '9': Play individual musical notes ('do', 're', 'mi', etc.) on the buzzer.
+00000000:       ; ; 
+00000000:       ; ; Songs and notes are defined using programmable mode on the piezo buzzer.
+00000000:       ; ; Delays are included between notes.
+00000000:       ; ;
+00000000:       ; 
+00000000:       ; ORG &000 ; Start address of the program
+00000000:       ; 
+00000000:       ; 
+00000000:       ; 
+00000000:       ; ;
+00000000:       ; ;
+00000000:       ; ;   ---- Detecting which key is pressed ----
+00000000:       ; ;
+00000000:       ; ;
+00000000:       ; 
+00000000:       ; main_loop
+00000000: 0FF2  ;     LDA &FF2          ; Load keypad input
+00000001: 3225  ;     SUB zero_key      ; Check if '0' is pressed
+00000002: 6007  ;     JNE check_one     ; If not, check the next key
+00000003: 021B  ;     LDA zero_display  ; Load the pattern for displaying '0'
+00000004: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+00000005: 4070  ;     JMP play_si       ; Play the note 'si'
+00000006: 4000  ;     JMP main_loop     ; Continue main loop
+00000007:       ; 
+00000007:       ; check_one
+00000007: 0FF2  ;     LDA &FF2          ; Load keypad input
+00000008: 3226  ;     SUB one_key       ; Check if '1' is pressed
+00000009: 600E  ;     JNE check_two     ; If not, check the next key
+0000000A: 021C  ;     LDA one_display   ; Load the pattern for displaying '1'
+0000000B: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+0000000C: 4077  ;     JMP play_song1    ; Plat the first song
+0000000D: 4000  ;     JMP main_loop     ; Continue main loop
+0000000E:       ; 
+0000000E:       ; check_two
+0000000E: 0FF2  ;     LDA &FF2          ; Load keypad input
+0000000F: 3227  ;     SUB two_key       ; Check if '2' is pressed
+00000010: 6015  ;     JNE check_three   ; If not, check the next key
+00000011: 021D  ;     LDA two_display   ; Load the pattern for displaying '2'
+00000012: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+00000013: 4101  ;     JMP play_song2    ; Play the second song
+00000014: 4000  ;     JMP main_loop     ; Continue main loop
+00000015:       ; 
+00000015:       ; check_three
+00000015: 0FF2  ;     LDA &FF2          ; Load keypad input
+00000016: 3228  ;     SUB three_key     ; Check if '3' is pressed
+00000017: 601C  ;     JNE check_four    ; If not, check the next key
+00000018: 021E  ;     LDA three_display ; Load the pattern for displaying '3'
+00000019: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+0000001A: 418D  ;     JMP play_song3    ; Play the third song
+0000001B: 4000  ;     JMP main_loop     ; Continue main loop
+0000001C:       ; 
+0000001C:       ; check_four
+0000001C: 0FF2  ;     LDA &FF2          ; Load keypad input
+0000001D: 3229  ;     SUB four_key      ; Check if '4' is pressed
+0000001E: 6023  ;     JNE check_five    ; If not, check the next key
+0000001F: 021F  ;     LDA four_display  ; Load the pattern for displaying '4'
+00000020: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+00000021: 4046  ;     JMP play_do       ; Play the note 'do'
+00000022: 4000  ;     JMP main_loop     ; Continue main loop
+00000023:       ; 
+00000023:       ; check_five
+00000023: 0FF2  ;     LDA &FF2          ; Load keypad input
+00000024: 322A  ;     SUB five_key      ; Check if '5' is pressed
+00000025: 602A  ;     JNE check_six     ; If not, check the next key
+00000026: 0220  ;     LDA five_display  ; Load the pattern for displaying '5'
+00000027: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+00000028: 404D  ;     JMP play_re       ; Play the note 're'
+00000029: 4000  ;     JMP main_loop     ; Continue main loop
+0000002A:       ; 
+0000002A:       ; check_six
+0000002A: 0FF2  ;     LDA &FF2          ; Load keypad input
+0000002B: 322B  ;     SUB six_key       ; Check if '6' is pressed
+0000002C: 6031  ;     JNE check_seven   ; If not, check the next key
+0000002D: 0221  ;     LDA six_display   ; Load the pattern for displaying '6'
+0000002E: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+0000002F: 4054  ;     JMP play_mi       ; Play the note 'mi'
+00000030: 4000  ;     JMP main_loop     ; Continue main loop
+00000031:       ; 
+00000031:       ; check_seven
+00000031: 0FF2  ;     LDA &FF2          ; Load keypad input
+00000032: 322C  ;     SUB seven_key     ; Check if '7' is pressed
+00000033: 6038  ;     JNE check_eight   ; If not, check the next key
+00000034: 0222  ;     LDA seven_display ; Load the pattern for displaying '7'
+00000035: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+00000036: 405B  ;     JMP play_fa       ; Play the note 'fa'
+00000037: 4000  ;     JMP main_loop     ; Continue main loop
+00000038:       ; 
+00000038:       ; check_eight
+00000038: 0FF2  ;     LDA &FF2          ; Load keypad input
+00000039: 322D  ;     SUB eight_key     ; Check if '8' is pressed
+0000003A: 603F  ;     JNE check_nine    ; If not, check the next key
+0000003B: 0223  ;     LDA eight_display ; Load the pattern for displaying '8'
+0000003C: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+0000003D: 4062  ;     JMP play_sol      ; Play the note 'sol'
+0000003E: 4000  ;     JMP main_loop     ; Continue main loop
+0000003F:       ; 
+0000003F:       ; check_nine
+0000003F: 0FF2  ;     LDA &FF2          ; Load keypad input
+00000040: 322E  ;     SUB nine_key      ; Check if '9' is pressed
+00000041: 6000  ;     JNE main_loop     ; If not, continue the main loop
+00000042: 0224  ;     LDA nine_display  ; Load the pattern for displaying '9'
+00000043: 1FFA  ;     STA &FFA          ; Write to the last multi-segment display
+00000044: 4069  ;     JMP play_la       ; Play the note 'la'
+00000045: 4000  ;     JMP main_loop     ; Continue main loop
+00000046:       ; 
+00000046:       ; 
+00000046:       ; 
+00000046:       ; ;
+00000046:       ; ;
+00000046:       ; ;   ---- Defining piano keys ----
+00000046:       ; ;
+00000046:       ; ;
+00000046:       ; 
+00000046:       ; play_do
+00000046: 0240  ;     LDA lights_green    ; Turn lights on
+00000047: 1FFF  ;     STA &FFF
+00000048:       ; 
+00000048: 0238  ;     LDA note_do ; Play do
+00000049: 1FFD  ;     STA &FFD
+0000004A:       ; 
+0000004A: 023F  ;     LDA lights_off  ; Turn lights off
+0000004B: 1FFF  ;     STA &FFF
+0000004C:       ; 
+0000004C: 4000  ;     JMP main_loop   ; Continue to main loop
+0000004D:       ; 
+0000004D:       ; play_re
+0000004D: 0241  ;     LDA lights_yellow   ; Turn lights on
+0000004E: 1FFF  ;     STA &FFF
+0000004F:       ; 
+0000004F: 0239  ;     LDA note_re ; Play re
+00000050: 1FFD  ;     STA &FFD
+00000051:       ; 
+00000051: 023F  ;     LDA lights_off  ; Turn lights off
+00000052: 1FFF  ;     STA &FFF
+00000053:       ; 
+00000053: 4000  ;     JMP main_loop   ; Continue to main loop
+00000054:       ; 
+00000054:       ; play_mi
+00000054: 0242  ;     LDA lights_red  ; Turn lights on
+00000055: 1FFF  ;     STA &FFF
+00000056:       ; 
+00000056: 023A  ;     LDA note_mi ; Play mi
+00000057: 1FFD  ;     STA &FFD
+00000058:       ; 
+00000058: 023F  ;     LDA lights_off  ; Turn lights off
+00000059: 1FFF  ;     STA &FFF
+0000005A:       ; 
+0000005A: 4000  ;     JMP main_loop   ; Continue to main loop
+0000005B:       ; 
+0000005B:       ; play_fa
+0000005B: 0240  ;     LDA lights_green    ; Turn lights on
+0000005C: 1FFF  ;     STA &FFF
+0000005D:       ; 
+0000005D: 023B  ;     LDA note_fa ; Play fa
+0000005E: 1FFD  ;     STA &FFD
+0000005F:       ; 
+0000005F: 023F  ;     LDA lights_off  ; Turn lights off
+00000060: 1FFF  ;     STA &FFF
+00000061:       ; 
+00000061: 4000  ;     JMP main_loop   ; Continue to main loop
+00000062:       ; 
+00000062:       ; play_sol
+00000062: 0241  ;     LDA lights_yellow   ; Turn lights on
+00000063: 1FFF  ;     STA &FFF
+00000064:       ; 
+00000064: 023C  ;     LDA note_sol ; Play sol
+00000065: 1FFD  ;     STA &FFD
+00000066:       ; 
+00000066: 023F  ;     LDA lights_off  ; Turn lights off
+00000067: 1FFF  ;     STA &FFF
+00000068:       ; 
+00000068: 4000  ;     JMP main_loop   ; Continue to main loop
+00000069:       ; 
+00000069:       ; play_la
+00000069: 0242  ;     LDA lights_red  ; Turn lights on
+0000006A: 1FFF  ;     STA &FFF
+0000006B:       ; 
+0000006B: 023D  ;     LDA note_la ; Play la
+0000006C: 1FFD  ;     STA &FFD
+0000006D:       ; 
+0000006D: 023F  ;     LDA lights_off  ; Turn lights off
+0000006E: 1FFF  ;     STA &FFF
+0000006F:       ; 
+0000006F: 4000  ;     JMP main_loop   ; Continue to main loop
+00000070:       ; 
+00000070:       ; play_si 
+00000070: 0240  ;     LDA lights_green    ; Turn lights on
+00000071: 1FFF  ;     STA &FFF
+00000072:       ; 
+00000072: 023E  ;     LDA note_si ; Play si
+00000073: 1FFD  ;     STA &FFD
+00000074:       ; 
+00000074: 023F  ;     LDA lights_off  ; Turn lights off
+00000075: 1FFF  ;     STA &FFF
+00000076:       ; 
+00000076: 4000  ;     JMP main_loop   ; Continue to main loop
+00000077:       ; 
+00000077:       ; 
+00000077:       ; 
+00000077:       ; ;
+00000077:       ; ;
+00000077:       ; ;   ---- Pattern for song 1 ----
+00000077:       ; ;
+00000077:       ; ;
+00000077:       ; 
+00000077:       ; play_song1
+00000077: 0240  ;     LDA lights_green
+00000078: 1FFF  ;     STA &FFF
+00000079:       ;     ; Snail song: a = c4, b = e4
+00000079:       ;     ; First segment: a b
+00000079: 022F  ;     LDA note_c4       
+0000007A: 1FFD  ;     STA &FFD          
+0000007B: 0219  ;     LDA delay
+0000007C:       ; delay1
+0000007C: 321A  ;     SUB one
+0000007D: 607C  ;     JNE delay1
+0000007E:       ; 
+0000007E: 0231  ;     LDA note_e4       
+0000007F: 1FFD  ;     STA &FFD          
+00000080: 0219  ;     LDA delay
+00000081:       ; delay2
+00000081: 321A  ;     SUB one
+00000082: 6081  ;     JNE delay2
+00000083:       ; 
+00000083:       ;     ; Second segment: aa b
+00000083: 022F  ;     LDA note_c4       
+00000084: 1FFD  ;     STA &FFD          
+00000085: 0219  ;     LDA delay
+00000086:       ; delay3
+00000086: 321A  ;     SUB one
+00000087: 6086  ;     JNE delay3
+00000088:       ; 
+00000088: 022F  ;     LDA note_c4       
+00000089: 1FFD  ;     STA &FFD          
+0000008A: 0219  ;     LDA delay
+0000008B:       ; delay4
+0000008B: 321A  ;     SUB one
+0000008C: 608B  ;     JNE delay4
+0000008D:       ; 
+0000008D: 0231  ;     LDA note_e4       
+0000008E: 1FFD  ;     STA &FFD          
+0000008F: 0219  ;     LDA delay
+00000090:       ; delay5
+00000090: 321A  ;     SUB one
+00000091: 6090  ;     JNE delay5
+00000092:       ; 
+00000092: 0243  ;     LDA lights_all
+00000093: 1FFF  ;     STA &FFF
+00000094:       ; 
+00000094:       ;     ; Third segment: aa bb
+00000094: 022F  ;     LDA note_c4       
+00000095: 1FFD  ;     STA &FFD          
+00000096: 0219  ;     LDA delay
+00000097:       ; delay6
+00000097: 321A  ;     SUB one
+00000098: 6097  ;     JNE delay6
+00000099:       ; 
+00000099: 022F  ;     LDA note_c4       
+0000009A: 1FFD  ;     STA &FFD          
+0000009B: 0219  ;     LDA delay
+0000009C:       ; delay7
+0000009C: 321A  ;     SUB one
+0000009D: 609C  ;     JNE delay7
+0000009E:       ; 
+0000009E: 0231  ;     LDA note_e4       
+0000009F: 1FFD  ;     STA &FFD          
+000000A0: 0219  ;     LDA delay
+000000A1:       ; delay8
+000000A1: 321A  ;     SUB one
+000000A2: 60A1  ;     JNE delay8
+000000A3:       ; 
+000000A3: 0231  ;     LDA note_e4       
+000000A4: 1FFD  ;     STA &FFD          
+000000A5: 0219  ;     LDA delay
+000000A6:       ; delay9
+000000A6: 321A  ;     SUB one
+000000A7: 60A6  ;     JNE delay9
+000000A8:       ; 
+000000A8: 0240  ;     LDA lights_green
+000000A9: 1FFF  ;     STA &FFF
+000000AA:       ;     ; Fourth segment: a b
+000000AA: 022F  ;     LDA note_c4       
+000000AB: 1FFD  ;     STA &FFD          
+000000AC: 0219  ;     LDA delay
+000000AD:       ; delay10
+000000AD: 321A  ;     SUB one
+000000AE: 60AD  ;     JNE delay10
+000000AF:       ; 
+000000AF: 0231  ;     LDA note_e4       
+000000B0: 1FFD  ;     STA &FFD          
+000000B1: 0219  ;     LDA delay
+000000B2:       ; delay11
+000000B2: 321A  ;     SUB one
+000000B3: 60B2  ;     JNE delay11
+000000B4:       ; 
+000000B4:       ;     ; Fifth segment: aa bb
+000000B4: 022F  ;     LDA note_c4       
+000000B5: 1FFD  ;     STA &FFD          
+000000B6: 0219  ;     LDA delay
+000000B7:       ; delay12
+000000B7: 321A  ;     SUB one
+000000B8: 60B7  ;     JNE delay12
+000000B9:       ; 
+000000B9: 022F  ;     LDA note_c4       
+000000BA: 1FFD  ;     STA &FFD          
+000000BB: 0219  ;     LDA delay
+000000BC:       ; delay13
+000000BC: 321A  ;     SUB one
+000000BD: 60BC  ;     JNE delay13
+000000BE:       ; 
+000000BE: 0231  ;     LDA note_e4       
+000000BF: 1FFD  ;     STA &FFD          
+000000C0: 0219  ;     LDA delay
+000000C1:       ; delay14
+000000C1: 321A  ;     SUB one
+000000C2: 60C1  ;     JNE delay14
+000000C3:       ; 
+000000C3: 0231  ;     LDA note_e4       
+000000C4: 1FFD  ;     STA &FFD          
+000000C5: 0219  ;     LDA delay
+000000C6:       ; delay15
+000000C6: 321A  ;     SUB one
+000000C7: 60C6  ;     JNE delay15
+000000C8:       ; 
+000000C8: 0241  ;     LDA lights_yellow
+000000C9: 1FFF  ;     STA &FFF
+000000CA:       ; 
+000000CA:       ;     ; Sixth segment: aa b
+000000CA: 022F  ;     LDA note_c4       
+000000CB: 1FFD  ;     STA &FFD          
+000000CC: 0219  ;     LDA delay
+000000CD:       ; delay16
+000000CD: 321A  ;     SUB one
+000000CE: 60CD  ;     JNE delay16
+000000CF:       ; 
+000000CF: 022F  ;     LDA note_c4       
+000000D0: 1FFD  ;     STA &FFD          
+000000D1: 0219  ;     LDA delay
+000000D2:       ; delay17
+000000D2: 321A  ;     SUB one
+000000D3: 60D2  ;     JNE delay17
+000000D4:       ; 
+000000D4: 0231  ;     LDA note_e4       
+000000D5: 1FFD  ;     STA &FFD          
+000000D6: 0219  ;     LDA delay
+000000D7:       ; delay18
+000000D7: 321A  ;     SUB one
+000000D8: 60D7  ;     JNE delay18
+000000D9:       ; 
+000000D9:       ;     ; Seventh segment: aa bb
+000000D9: 022F  ;     LDA note_c4       
+000000DA: 1FFD  ;     STA &FFD          
+000000DB: 0219  ;     LDA delay
+000000DC:       ; delay19
+000000DC: 321A  ;     SUB one
+000000DD: 60DC  ;     JNE delay19
+000000DE:       ; 
+000000DE: 022F  ;     LDA note_c4       
+000000DF: 1FFD  ;     STA &FFD          
+000000E0: 0219  ;     LDA delay
+000000E1:       ; delay20
+000000E1: 321A  ;     SUB one
+000000E2: 60E1  ;     JNE delay20
+000000E3:       ; 
+000000E3: 0231  ;     LDA note_e4       
+000000E4: 1FFD  ;     STA &FFD          
+000000E5: 0219  ;     LDA delay
+000000E6:       ; delay21
+000000E6: 321A  ;     SUB one
+000000E7: 60E6  ;     JNE delay21
+000000E8:       ; 
+000000E8: 0231  ;     LDA note_e4       
+000000E9: 1FFD  ;     STA &FFD          
+000000EA: 0219  ;     LDA delay
+000000EB:       ; delay22
+000000EB: 321A  ;     SUB one
+000000EC: 60EB  ;     JNE delay22
+000000ED:       ; 
+000000ED: 0243  ;     LDA lights_all
+000000EE: 1FFF  ;     STA &FFF
+000000EF:       ; 
+000000EF:       ;     ; Eighth segment: aa b
+000000EF: 022F  ;     LDA note_c4       
+000000F0: 1FFD  ;     STA &FFD          
+000000F1: 0219  ;     LDA delay
+000000F2:       ; delay23
+000000F2: 321A  ;     SUB one
+000000F3: 60F2  ;     JNE delay23
+000000F4:       ; 
+000000F4: 022F  ;     LDA note_c4       
+000000F5: 1FFD  ;     STA &FFD          
+000000F6: 0219  ;     LDA delay
+000000F7:       ; delay24
+000000F7: 321A  ;     SUB one
+000000F8: 60F7  ;     JNE delay24
+000000F9:       ; 
+000000F9: 0231  ;     LDA note_e4       
+000000FA: 1FFD  ;     STA &FFD          
+000000FB: 0219  ;     LDA delay
+000000FC:       ; delay25
+000000FC: 321A  ;     SUB one
+000000FD: 60FC  ;     JNE delay25
+000000FE:       ; 
+000000FE: 023F  ;     LDA lights_off    ; Turn off the lights
+000000FF: 1FFF  ;     STA &FFF
+00000100:       ; 
+00000100: 4000  ;     JMP main_loop     ; Go back to main loop
+00000101:       ; 
+00000101:       ; 
+00000101:       ; 
+00000101:       ; ;
+00000101:       ; ;
+00000101:       ; ;   ---- Pattern for song 2 ----
+00000101:       ; ;
+00000101:       ; ;
+00000101:       ; 
+00000101:       ; play_song2
+00000101: 0240  ;     LDA lights_green
+00000102: 1FFF  ;     STA &FFF
+00000103:       ;     ; First note: G4
+00000103: 0232  ;     LDA note_g4       
+00000104: 1FFD  ;     STA &FFD          
+00000105: 0219  ;     LDA delay
+00000106:       ; delay26
+00000106: 321A  ;     SUB one
+00000107: 6106  ;     JNE delay26
+00000108:       ; 
+00000108:       ;     ; Second note: A4
+00000108: 0233  ;     LDA note_a4       
+00000109: 1FFD  ;     STA &FFD          
+0000010A: 0219  ;     LDA delay
+0000010B:       ; delay27
+0000010B: 321A  ;     SUB one
+0000010C: 610B  ;     JNE delay27
+0000010D:       ; 
+0000010D:       ;     ; Third note: B4
+0000010D: 0234  ;     LDA note_b4       
+0000010E: 1FFD  ;     STA &FFD          
+0000010F: 0219  ;     LDA delay
+00000110:       ; delay28
+00000110: 321A  ;     SUB one
+00000111: 6110  ;     JNE delay28
+00000112:       ; 
+00000112:       ;     ; Fourth note: D5
+00000112: 0236  ;     LDA note_d5       
+00000113: 1FFD  ;     STA &FFD          
+00000114: 0219  ;     LDA delay
+00000115:       ; delay29
+00000115: 321A  ;     SUB one
+00000116: 6115  ;     JNE delay29
+00000117:       ; 
+00000117: 0243  ;     LDA lights_all
+00000118: 1FFF  ;     STA &FFF
+00000119:       ; 
+00000119:       ;     ; Fifth note: G4 (repeat)
+00000119: 0232  ;     LDA note_g4       
+0000011A: 1FFD  ;     STA &FFD          
+0000011B: 0219  ;     LDA delay
+0000011C:       ; delay30
+0000011C: 321A  ;     SUB one
+0000011D: 611C  ;     JNE delay30
+0000011E:       ; 
+0000011E:       ;     ; Sixth note: F#4
+0000011E: 0237  ;     LDA note_fsharp4  
+0000011F: 1FFD  ;     STA &FFD          
+00000120: 0219  ;     LDA delay
+00000121:       ; delay31
+00000121: 321A  ;     SUB one
+00000122: 6121  ;     JNE delay31
+00000123:       ; 
+00000123:       ;     ; Seventh note: E4
+00000123: 0231  ;     LDA note_e4       
+00000124: 1FFD  ;     STA &FFD          
+00000125: 0219  ;     LDA delay
+00000126:       ; delay32
+00000126: 321A  ;     SUB one
+00000127: 6126  ;     JNE delay32
+00000128:       ; 
+00000128:       ;     ; Eighth note: C5
+00000128: 0235  ;     LDA note_c5       
+00000129: 1FFD  ;     STA &FFD          
+0000012A: 0219  ;     LDA delay
+0000012B:       ; delay33
+0000012B: 321A  ;     SUB one
+0000012C: 612B  ;     JNE delay33
+0000012D:       ; 
+0000012D:       ;     ; Ninth note: A4 (repeat)
+0000012D: 0233  ;     LDA note_a4       
+0000012E: 1FFD  ;     STA &FFD          
+0000012F: 0219  ;     LDA delay
+00000130:       ; delay34
+00000130: 321A  ;     SUB one
+00000131: 6130  ;     JNE delay34
+00000132:       ; 
+00000132: 0242  ;     LDA lights_red
+00000133: 1FFF  ;     STA &FFF
+00000134:       ; 
+00000134:       ;     ; Tenth note: G4 (repeat)
+00000134: 0232  ;     LDA note_g4       
+00000135: 1FFD  ;     STA &FFD          
+00000136: 0219  ;     LDA delay
+00000137:       ; delay35
+00000137: 321A  ;     SUB one
+00000138: 6137  ;     JNE delay35
+00000139:       ; 
+00000139:       ;     ; Eleventh note: D5 (repeat)
+00000139: 0236  ;     LDA note_d5       
+0000013A: 1FFD  ;     STA &FFD          
+0000013B: 0219  ;     LDA delay
+0000013C:       ; delay36
+0000013C: 321A  ;     SUB one
+0000013D: 613C  ;     JNE delay36
+0000013E:       ; 
+0000013E:       ;     ; Twelfth note: F#4
+0000013E: 0237  ;     LDA note_fsharp4  
+0000013F: 1FFD  ;     STA &FFD          
+00000140: 0219  ;     LDA delay
+00000141:       ; delay37
+00000141: 321A  ;     SUB one
+00000142: 6141  ;     JNE delay37
+00000143:       ; 
+00000143:       ;     ; Thirteenth note: E4
+00000143: 0231  ;     LDA note_e4       
+00000144: 1FFD  ;     STA &FFD          
+00000145: 0219  ;     LDA delay
+00000146:       ; delay38
+00000146: 321A  ;     SUB one
+00000147: 6146  ;     JNE delay38
+00000148:       ; 
+00000148: 0241  ;     LDA lights_yellow
+00000149: 1FFF  ;     STA &FFF
+0000014A:       ; 
+0000014A:       ;     ; Fourteenth note: A4
+0000014A: 0233  ;     LDA note_a4       
+0000014B: 1FFD  ;     STA &FFD          
+0000014C: 0219  ;     LDA delay
+0000014D:       ; delay39
+0000014D: 321A  ;     SUB one
+0000014E: 614D  ;     JNE delay39
+0000014F:       ; 
+0000014F:       ;     ; Fifteenth note: B4
+0000014F: 0234  ;     LDA note_b4       
+00000150: 1FFD  ;     STA &FFD          
+00000151: 0219  ;     LDA delay
+00000152:       ; delay40
+00000152: 321A  ;     SUB one
+00000153: 6152  ;     JNE delay40
+00000154:       ; 
+00000154:       ;     ; Sixteenth note: C5
+00000154: 0235  ;     LDA note_c5       
+00000155: 1FFD  ;     STA &FFD          
+00000156: 0219  ;     LDA delay
+00000157:       ; delay41
+00000157: 321A  ;     SUB one
+00000158: 6157  ;     JNE delay41
+00000159:       ; 
+00000159:       ;     ; Seventeenth note: E4
+00000159: 0231  ;     LDA note_e4       
+0000015A: 1FFD  ;     STA &FFD          
+0000015B: 0219  ;     LDA delay
+0000015C:       ; delay42
+0000015C: 321A  ;     SUB one
+0000015D: 615C  ;     JNE delay42
+0000015E:       ; 
+0000015E: 0240  ;     LDA lights_green
+0000015F: 1FFF  ;     STA &FFF
+00000160:       ; 
+00000160:       ;     ; Eighteenth note: G4
+00000160: 0232  ;     LDA note_g4       
+00000161: 1FFD  ;     STA &FFD          
+00000162: 0219  ;     LDA delay
+00000163:       ; delay43
+00000163: 321A  ;     SUB one
+00000164: 6163  ;     JNE delay43
+00000165:       ; 
+00000165:       ;     ; Nineteenth note: D5
+00000165: 0236  ;     LDA note_d5       
+00000166: 1FFD  ;     STA &FFD          
+00000167: 0219  ;     LDA delay
+00000168:       ; delay44
+00000168: 321A  ;     SUB one
+00000169: 6168  ;     JNE delay44
+0000016A:       ; 
+0000016A:       ;     ; Twentieth note: F#4
+0000016A: 0237  ;     LDA note_fsharp4  
+0000016B: 1FFD  ;     STA &FFD          
+0000016C: 0219  ;     LDA delay
+0000016D:       ; delay45
+0000016D: 321A  ;     SUB one
+0000016E: 616D  ;     JNE delay45
+0000016F:       ; 
+0000016F:       ;     ; Twenty-first note: A4
+0000016F: 0233  ;     LDA note_a4       
+00000170: 1FFD  ;     STA &FFD          
+00000171: 0219  ;     LDA delay
+00000172:       ; delay46
+00000172: 321A  ;     SUB one
+00000173: 6172  ;     JNE delay46
+00000174:       ; 
+00000174: 0243  ;     LDA lights_all
+00000175: 1FFF  ;     STA &FFF
+00000176:       ; 
+00000176:       ;     ; Twenty-second note: G4
+00000176: 0232  ;     LDA note_g4       
+00000177: 1FFD  ;     STA &FFD          
+00000178: 0219  ;     LDA delay
+00000179:       ; delay47
+00000179: 321A  ;     SUB one
+0000017A: 6179  ;     JNE delay47
+0000017B:       ; 
+0000017B:       ;     ; Twenty-third note: B4
+0000017B: 0234  ;     LDA note_b4       
+0000017C: 1FFD  ;     STA &FFD          
+0000017D: 0219  ;     LDA delay
+0000017E:       ; delay48
+0000017E: 321A  ;     SUB one
+0000017F: 617E  ;     JNE delay48
+00000180:       ; 
+00000180:       ;     ; Twenty-fourth note: C5
+00000180: 0235  ;     LDA note_c5       
+00000181: 1FFD  ;     STA &FFD          
+00000182: 0219  ;     LDA delay
+00000183:       ; delay49
+00000183: 321A  ;     SUB one
+00000184: 6183  ;     JNE delay49
+00000185:       ; 
+00000185:       ;     ; Twenty-fifth note: E4
+00000185: 0231  ;     LDA note_e4       
+00000186: 1FFD  ;     STA &FFD          
+00000187: 0219  ;     LDA delay
+00000188:       ; delay50
+00000188: 321A  ;     SUB one
+00000189: 6188  ;     JNE delay50
+0000018A:       ; 
+0000018A: 023F  ;     LDA lights_off
+0000018B: 1FFF  ;     STA &FFF
+0000018C:       ; 
+0000018C: 4000  ;     JMP main_loop
+0000018D:       ; 
+0000018D:       ; 
+0000018D:       ; 
+0000018D:       ; ;
+0000018D:       ; ;
+0000018D:       ; ;   ---- Pattern for song 3 ----
+0000018D:       ; ;
+0000018D:       ; ;
+0000018D:       ; 
+0000018D:       ; play_song3
+0000018D: 0242  ;     LDA lights_red
+0000018E: 1FFF  ;     STA &FFF
+0000018F:       ; 
+0000018F:       ;     ; First note: C4
+0000018F: 022F  ;     LDA note_c4       
+00000190: 1FFD  ;     STA &FFD          
+00000191: 0219  ;     LDA delay
+00000192:       ; delay51
+00000192: 321A  ;     SUB one
+00000193: 6192  ;     JNE delay51
+00000194:       ; 
+00000194:       ;     ; Second note: D4
+00000194: 0230  ;     LDA note_d4       
+00000195: 1FFD  ;     STA &FFD          
+00000196: 0219  ;     LDA delay
+00000197:       ; delay52
+00000197: 321A  ;     SUB one
+00000198: 6197  ;     JNE delay52
+00000199:       ; 
+00000199:       ;     ; Third note: E4
+00000199: 0231  ;     LDA note_e4       
+0000019A: 1FFD  ;     STA &FFD          
+0000019B: 0219  ;     LDA delay
+0000019C:       ; delay53
+0000019C: 321A  ;     SUB one
+0000019D: 619C  ;     JNE delay53
+0000019E:       ; 
+0000019E:       ;     ; Fourth note: F#4
+0000019E: 0237  ;     LDA note_fsharp4  
+0000019F: 1FFD  ;     STA &FFD          
+000001A0: 0219  ;     LDA delay
+000001A1:       ; delay54
+000001A1: 321A  ;     SUB one
+000001A2: 61A1  ;     JNE delay54
+000001A3:       ; 
+000001A3: 0241  ;     LDA lights_yellow
+000001A4: 1FFF  ;     STA &FFF
+000001A5:       ; 
+000001A5:       ;     ; Fifth note: G4
+000001A5: 0232  ;     LDA note_g4       
+000001A6: 1FFD  ;     STA &FFD          
+000001A7: 0219  ;     LDA delay
+000001A8:       ; delay55
+000001A8: 321A  ;     SUB one
+000001A9: 61A8  ;     JNE delay55
+000001AA:       ; 
+000001AA:       ;     ; Sixth note: A4
+000001AA: 0233  ;     LDA note_a4       
+000001AB: 1FFD  ;     STA &FFD          
+000001AC: 0219  ;     LDA delay
+000001AD:       ; delay56
+000001AD: 321A  ;     SUB one
+000001AE: 61AD  ;     JNE delay56
+000001AF:       ; 
+000001AF:       ;     ; Seventh note: B4
+000001AF: 0234  ;     LDA note_b4       
+000001B0: 1FFD  ;     STA &FFD          
+000001B1: 0219  ;     LDA delay
+000001B2:       ; delay57
+000001B2: 321A  ;     SUB one
+000001B3: 61B2  ;     JNE delay57
+000001B4:       ; 
+000001B4:       ;     ; Eighth note: C5
+000001B4: 0235  ;     LDA note_c5       
+000001B5: 1FFD  ;     STA &FFD          
+000001B6: 0219  ;     LDA delay
+000001B7:       ; delay58
+000001B7: 321A  ;     SUB one
+000001B8: 61B7  ;     JNE delay58
+000001B9:       ;     
+000001B9: 0243  ;     LDA lights_all
+000001BA: 1FFF  ;     STA &FFF
+000001BB:       ; 
+000001BB:       ;     ; Ninth note: B4 (repeat)
+000001BB: 0234  ;     LDA note_b4       
+000001BC: 1FFD  ;     STA &FFD          
+000001BD: 0219  ;     LDA delay
+000001BE:       ; delay59
+000001BE: 321A  ;     SUB one
+000001BF: 61BE  ;     JNE delay59
+000001C0:       ; 
+000001C0:       ;     ; Tenth note: A4 (repeat)
+000001C0: 0233  ;     LDA note_a4       
+000001C1: 1FFD  ;     STA &FFD          
+000001C2: 0219  ;     LDA delay
+000001C3:       ; delay60
+000001C3: 321A  ;     SUB one
+000001C4: 61C3  ;     JNE delay60
+000001C5:       ; 
+000001C5:       ;     ; Eleventh note: G4 (repeat)
+000001C5: 0232  ;     LDA note_g4       
+000001C6: 1FFD  ;     STA &FFD          
+000001C7: 0219  ;     LDA delay
+000001C8:       ; delay61
+000001C8: 321A  ;     SUB one
+000001C9: 61C8  ;     JNE delay61
+000001CA:       ; 
+000001CA:       ;     ; Twelfth note: F#4 (repeat)
+000001CA: 0237  ;     LDA note_fsharp4  
+000001CB: 1FFD  ;     STA &FFD          
+000001CC: 0219  ;     LDA delay
+000001CD:       ; delay62
+000001CD: 321A  ;     SUB one
+000001CE: 61CD  ;     JNE delay62
+000001CF:       ; 
+000001CF:       ;     ; Thirteenth note: E4 (repeat)
+000001CF: 0231  ;     LDA note_e4       
+000001D0: 1FFD  ;     STA &FFD          
+000001D1: 0219  ;     LDA delay
+000001D2:       ; delay63
+000001D2: 321A  ;     SUB one
+000001D3: 61D2  ;     JNE delay63
+000001D4:       ; 
+000001D4: 0241  ;     LDA lights_yellow
+000001D5: 1FFF  ;     STA &FFF
+000001D6:       ; 
+000001D6:       ;     ; Fourteenth note: D4 (repeat)
+000001D6: 0230  ;     LDA note_d4       
+000001D7: 1FFD  ;     STA &FFD          
+000001D8: 0219  ;     LDA delay
+000001D9:       ; delay64
+000001D9: 321A  ;     SUB one
+000001DA: 61D9  ;     JNE delay64
+000001DB:       ; 
+000001DB:       ;     ; Fifteenth note: C4 (repeat)
+000001DB: 022F  ;     LDA note_c4       
+000001DC: 1FFD  ;     STA &FFD          
+000001DD: 0219  ;     LDA delay
+000001DE:       ; delay65
+000001DE: 321A  ;     SUB one
+000001DF: 61DE  ;     JNE delay65
+000001E0:       ; 
+000001E0:       ;     ; Sixteenth note: G4
+000001E0: 0232  ;     LDA note_g4       
+000001E1: 1FFD  ;     STA &FFD          
+000001E2: 0219  ;     LDA delay
+000001E3:       ; delay66
+000001E3: 321A  ;     SUB one
+000001E4: 61E3  ;     JNE delay66
+000001E5:       ; 
+000001E5:       ;     ; Seventeenth note: E4
+000001E5: 0231  ;     LDA note_e4       
+000001E6: 1FFD  ;     STA &FFD          
+000001E7: 0219  ;     LDA delay
+000001E8:       ; delay67
+000001E8: 321A  ;     SUB one
+000001E9: 61E8  ;     JNE delay67
+000001EA:       ; 
+000001EA:       ;     ; Eighteenth note: D4
+000001EA: 0230  ;     LDA note_d4       
+000001EB: 1FFD  ;     STA &FFD          
+000001EC: 0219  ;     LDA delay
+000001ED:       ; delay68
+000001ED: 321A  ;     SUB one
+000001EE: 61ED  ;     JNE delay68
+000001EF:       ; 
+000001EF: 0242  ;     LDA lights_red
+000001F0: 1FFF  ;     STA &FFF
+000001F1:       ; 
+000001F1:       ;     ; Nineteenth note: F#4
+000001F1: 0237  ;     LDA note_fsharp4  
+000001F2: 1FFD  ;     STA &FFD          
+000001F3: 0219  ;     LDA delay
+000001F4:       ; delay69
+000001F4: 321A  ;     SUB one
+000001F5: 61F4  ;     JNE delay69
+000001F6:       ; 
+000001F6:       ;     ; Twentieth note: A4
+000001F6: 0233  ;     LDA note_a4       
+000001F7: 1FFD  ;     STA &FFD          
+000001F8: 0219  ;     LDA delay
+000001F9:       ; delay70
+000001F9: 321A  ;     SUB one
+000001FA: 61F9  ;     JNE delay70
+000001FB:       ; 
+000001FB:       ;     ; Twenty-first note: G4
+000001FB: 0232  ;     LDA note_g4       
+000001FC: 1FFD  ;     STA &FFD          
+000001FD: 0219  ;     LDA delay
+000001FE:       ; delay71
+000001FE: 321A  ;     SUB one
+000001FF: 61FE  ;     JNE delay71
+00000200:       ; 
+00000200:       ;     ; Twenty-second note: B4
+00000200: 0234  ;     LDA note_b4       
+00000201: 1FFD  ;     STA &FFD          
+00000202: 0219  ;     LDA delay
+00000203:       ; delay72
+00000203: 321A  ;     SUB one
+00000204: 6203  ;     JNE delay72
+00000205:       ; 
+00000205: 0240  ;     LDA lights_green
+00000206: 1FFF  ;     STA &FFF
+00000207:       ; 
+00000207:       ;     ; Twenty-third note: D5
+00000207: 0236  ;     LDA note_d5       
+00000208: 1FFD  ;     STA &FFD          
+00000209: 0219  ;     LDA delay
+0000020A:       ; delay73
+0000020A: 321A  ;     SUB one
+0000020B: 620A  ;     JNE delay73
+0000020C:       ; 
+0000020C:       ;     ; Twenty-fourth note: C5
+0000020C: 0235  ;     LDA note_c5       
+0000020D: 1FFD  ;     STA &FFD          
+0000020E: 0219  ;     LDA delay
+0000020F:       ; delay74
+0000020F: 321A  ;     SUB one
+00000210: 620F  ;     JNE delay74
+00000211:       ; 
+00000211:       ;     ; Twenty-fifth note: G4
+00000211: 0232  ;     LDA note_g4       
+00000212: 1FFD  ;     STA &FFD          
+00000213: 0219  ;     LDA delay
+00000214:       ; delay75
+00000214: 321A  ;     SUB one
+00000215: 6214  ;     JNE delay75
+00000216:       ; 
+00000216: 023F  ;     LDA lights_off    ; Turn off the lights
+00000217: 1FFF  ;     STA &FFF
+00000218:       ; 
+00000218: 4000  ;     JMP main_loop     ; Go back to main loop
+00000219:       ; 
+00000219:       ; 
+00000219:       ; 
+00000219:       ; ;
+00000219:       ; ;
+00000219:       ; ;   ---- Declaring data ----
+00000219:       ; ;
+00000219:       ; ;
+00000219:       ; 
+00000219: FFFF  ; delay         DEFW &FFFF 
+0000021A: 0001  ; one            DEFW &0001   
+0000021B: 0C3F  ; zero_display  DEFW &0C3F  ; Pattern for displaying '0' on multi-segment display
+0000021C: 1200  ; one_display   DEFW &1200  ; Pattern for displaying '1' on multi-segment display (bits 9 and 12 on)
+0000021D: 00DB  ; two_display   DEFW &00DB  ; Pattern for displaying '2' on multi-segment display
+0000021E: 00CF  ; three_display DEFW &00CF  ; Pattern for displaying '3' on multi-segment display
+0000021F: 00E6  ; four_display  DEFW &00E6  ; Pattern for displaying '4' on multi-segment display
+00000220: 00ED  ; five_display  DEFW &00ED  ; Pattern for displaying '5' on multi-segment display
+00000221: 00FD  ; six_display   DEFW &00FD  ; Pattern for displaying '6' on multi-segment display
+00000222: 1401  ; seven_display DEFW &1401  ; Pattern for displaying '7' on multi-segment display (bits 0, 10, and 11 o
+                ; n)
+00000223: 00FF  ; eight_display DEFW &00FF  ; Pattern for displaying '8' on multi-segment display
+00000224: 00EF  ; nine_display  DEFW &00EF  ; Pattern for displaying '9' on multi-segment display
+00000225:       ; 
+00000225: 0001  ; zero_key      DEFW &0001  ; Keypad value for '0'
+00000226: 0002  ; one_key       DEFW &0002  ; Keypad value for '1'
+00000227: 0004  ; two_key       DEFW &0004  ; Keypad value for '2'
+00000228: 0008  ; three_key     DEFW &0008  ; Keypad value for '3'
+00000229: 0010  ; four_key      DEFW &0010  ; Keypad value for '4'
+0000022A: 0020  ; five_key      DEFW &0020  ; Keypad value for '5'
+0000022B: 0040  ; six_key       DEFW &0040  ; Keypad value for '6'
+0000022C: 0080  ; seven_key     DEFW &0080  ; Keypad value for '7'
+0000022D: 0100  ; eight_key     DEFW &0100  ; Keypad value for '8'
+0000022E: 0200  ; nine_key      DEFW &0200  ; Keypad value for '9'
+0000022F:       ; 
+0000022F: 9800  ; note_c4        DEFW &9800 ; Mode = 1, Octave = 4, Note = 0 (C), Duration = 8 (0.8 seconds)
+00000230: 9812  ; note_d4        DEFW &9812 ; Mode = 1, Octave = 4, Note = 2 (D), Duration = 2 (0.2 seconds)
+00000231: 9924  ; note_e4        DEFW &9924 ; Mode = 1, Octave = 4, Note = 4 (E), Duration = 2 (0.2 seconds)
+00000232: 9A07  ; note_g4        DEFW &9A07 ; Mode = 1, Octave = 4, Note = 7 (G), Duration = 7 (0.7 seconds)
+00000233: 9A18  ; note_a4        DEFW &9A18 ; Mode = 1, Octave = 4, Note = 9 (A), Duration = 8 (0.8 seconds)
+00000234: 9A1B  ; note_b4        DEFW &9A1B ; Mode = 1, Octave = 4, Note = 11 (B), Duration = 8 (0.8 seconds)
+00000235: 9B00  ; note_c5        DEFW &9B00 ; Mode = 1, Octave = 5, Note = 0 (C), Duration = 8 (0.8 seconds)
+00000236: 9B12  ; note_d5        DEFW &9B12 ; Mode = 1, Octave = 5, Note = 2 (D), Duration = 2 (0.2 seconds)
+00000237: 9A16  ; note_fsharp4   DEFW &9A16 ; Mode = 1, Octave = 4, Note = 6 (F#), Duration = 6 (0.6 seconds)
+00000238:       ; 
+00000238: 9830  ; note_do       DEFW &9830  ; Mode = 1, Octave = 4, Note = 0 (C), Duration = 4 (0.4 seconds)
+00000239: 9832  ; note_re       DEFW &9832  ; Mode = 1, Octave = 4, Note = 2 (D), Duration = 4 (0.4 seconds)
+0000023A: 9834  ; note_mi       DEFW &9834  ; Mode = 1, Octave = 4, Note = 4 (E), Duration = 4 (0.4 seconds)
+0000023B: 9835  ; note_fa       DEFW &9835  ; Mode = 1, Octave = 4, Note = 5 (F), Duration = 4 (0.4 seconds)
+0000023C: 9837  ; note_sol      DEFW &9837  ; Mode = 1, Octave = 4, Note = 7 (G), Duration = 4 (0.4 seconds)
+0000023D: 9839  ; note_la       DEFW &9839  ; Mode = 1, Octave = 4, Note = 9 (A), Duration = 4 (0.4 seconds)
+0000023E: 983B  ; note_si       DEFW &983B  ; Mode = 1, Octave = 4, Note = 11 (B), Duration = 4 (0.4 seconds)
+0000023F:       ; 
+0000023F:       ; 
+0000023F: 0000  ; lights_off       DEFW &0000 ; 00000_000_000_00_000
+00000240: 0131  ; lights_green     DEFW &0131 ; 00000_001_001_10_001
+00000241: 0242  ; lights_yellow    DEFW &0242 ; 00000_010_010_00_010
+00000242: 048C  ; lights_red       DEFW &048C ; 00000_100_100_01_100
+00000243: 07FF  ; lights_all       DEFW &07FF ; 00000_111_111_11_111
+
+Symbol Table: Labels
+: main_loop                         00000000  Local --
+: check_one                         00000007  Local --
+: check_two                         0000000E  Local --
+: check_three                       00000015  Local --
+: check_four                        0000001C  Local --
+: check_five                        00000023  Local --
+: check_six                         0000002A  Local --
+: check_seven                       00000031  Local --
+: check_eight                       00000038  Local --
+: check_nine                        0000003F  Local --
+: play_do                           00000046  Local --
+: play_re                           0000004D  Local --
+: play_mi                           00000054  Local --
+: play_fa                           0000005B  Local --
+: play_sol                          00000062  Local --
+: play_la                           00000069  Local --
+: play_si                           00000070  Local --
+: play_song1                        00000077  Local --
+: delay1                            0000007C  Local --
+: delay2                            00000081  Local --
+: delay3                            00000086  Local --
+: delay4                            0000008B  Local --
+: delay5                            00000090  Local --
+: delay6                            00000097  Local --
+: delay7                            0000009C  Local --
+: delay8                            000000A1  Local --
+: delay9                            000000A6  Local --
+: delay10                           000000AD  Local --
+: delay11                           000000B2  Local --
+: delay12                           000000B7  Local --
+: delay13                           000000BC  Local --
+: delay14                           000000C1  Local --
+: delay15                           000000C6  Local --
+: delay16                           000000CD  Local --
+: delay17                           000000D2  Local --
+: delay18                           000000D7  Local --
+: delay19                           000000DC  Local --
+: delay20                           000000E1  Local --
+: delay21                           000000E6  Local --
+: delay22                           000000EB  Local --
+: delay23                           000000F2  Local --
+: delay24                           000000F7  Local --
+: delay25                           000000FC  Local --
+: play_song2                        00000101  Local --
+: delay26                           00000106  Local --
+: delay27                           0000010B  Local --
+: delay28                           00000110  Local --
+: delay29                           00000115  Local --
+: delay30                           0000011C  Local --
+: delay31                           00000121  Local --
+: delay32                           00000126  Local --
+: delay33                           0000012B  Local --
+: delay34                           00000130  Local --
+: delay35                           00000137  Local --
+: delay36                           0000013C  Local --
+: delay37                           00000141  Local --
+: delay38                           00000146  Local --
+: delay39                           0000014D  Local --
+: delay40                           00000152  Local --
+: delay41                           00000157  Local --
+: delay42                           0000015C  Local --
+: delay43                           00000163  Local --
+: delay44                           00000168  Local --
+: delay45                           0000016D  Local --
+: delay46                           00000172  Local --
+: delay47                           00000179  Local --
+: delay48                           0000017E  Local --
+: delay49                           00000183  Local --
+: delay50                           00000188  Local --
+: play_song3                        0000018D  Local --
+: delay51                           00000192  Local --
+: delay52                           00000197  Local --
+: delay53                           0000019C  Local --
+: delay54                           000001A1  Local --
+: delay55                           000001A8  Local --
+: delay56                           000001AD  Local --
+: delay57                           000001B2  Local --
+: delay58                           000001B7  Local --
+: delay59                           000001BE  Local --
+: delay60                           000001C3  Local --
+: delay61                           000001C8  Local --
+: delay62                           000001CD  Local --
+: delay63                           000001D2  Local --
+: delay64                           000001D9  Local --
+: delay65                           000001DE  Local --
+: delay66                           000001E3  Local --
+: delay67                           000001E8  Local --
+: delay68                           000001ED  Local --
+: delay69                           000001F4  Local --
+: delay70                           000001F9  Local --
+: delay71                           000001FE  Local --
+: delay72                           00000203  Local --
+: delay73                           0000020A  Local --
+: delay74                           0000020F  Local --
+: delay75                           00000214  Local --
+: delay                             00000219  Local --
+: one                               0000021A  Local --
+: zero_display                      0000021B  Local --
+: one_display                       0000021C  Local --
+: two_display                       0000021D  Local --
+: three_display                     0000021E  Local --
+: four_display                      0000021F  Local --
+: five_display                      00000220  Local --
+: six_display                       00000221  Local --
+: seven_display                     00000222  Local --
+: eight_display                     00000223  Local --
+: nine_display                      00000224  Local --
+: zero_key                          00000225  Local --
+: one_key                           00000226  Local --
+: two_key                           00000227  Local --
+: three_key                         00000228  Local --
+: four_key                          00000229  Local --
+: five_key                          0000022A  Local --
+: six_key                           0000022B  Local --
+: seven_key                         0000022C  Local --
+: eight_key                         0000022D  Local --
+: nine_key                          0000022E  Local --
+: note_c4                           0000022F  Local --
+: note_d4                           00000230  Local --
+: note_e4                           00000231  Local --
+: note_g4                           00000232  Local --
+: note_a4                           00000233  Local --
+: note_b4                           00000234  Local --
+: note_c5                           00000235  Local --
+: note_d5                           00000236  Local --
+: note_fsharp4                      00000237  Local --
+: note_do                           00000238  Local --
+: note_re                           00000239  Local --
+: note_mi                           0000023A  Local --
+: note_fa                           0000023B  Local --
+: note_sol                          0000023C  Local --
+: note_la                           0000023D  Local --
+: note_si                           0000023E  Local --
+: lights_off                        0000023F  Local --
+: lights_green                      00000240  Local --
+: lights_yellow                     00000241  Local --
+: lights_red                        00000242  Local --
+: lights_all                        00000243  Local --

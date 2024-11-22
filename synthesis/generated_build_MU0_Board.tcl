@@ -5,7 +5,6 @@
  read_verilog /home/y26054md/Questa/COMP12111/src/BoardLib/Keyboard.v
  read_verilog /home/y26054md/Questa/COMP12111/src/BoardLib/Segments_Scan.v
  read_verilog /home/y26054md/Questa/COMP12111/src/BoardLib/Uart_s7.v
- read_verilog /home/y26054md/Questa/COMP12111/src/Ex1/Display_Decoder.v
  read_verilog /home/y26054md/Questa/COMP12111/src/Ex3/MU0.v
  read_verilog /home/y26054md/Questa/COMP12111/src/Ex3/MU0_Alu.v
  read_verilog /home/y26054md/Questa/COMP12111/src/Ex3/MU0_Board.v

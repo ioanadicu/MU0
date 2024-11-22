@@ -1031,3 +1031,423 @@
  - 485636 [info] Writing sector 50 total size 65537
  - 485636 [info] Board said: P
  - 485636 [info] Starting warm boot 
+ - 2788158 [info] Starting STUMP Loader
+ - 2788158 [info] No serial port specified
+ - 2788158 [info] Searching for ports...
+ - 2788158 [info] Found ttyUSB0
+ - 2788158 [info] Found ttyS0
+ - 2788158 [info] Using ttyUSB0
+ - 2788158 [info] Port ttyUSB0
+ - 2788158 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 2788158 [info] Sectors to upload: 19
+ - 2788158 [info] File size bytes: 1241804
+ - 2838393 [info] Starting STUMP Loader
+ - 2838393 [info] No serial port specified
+ - 2838393 [info] Searching for ports...
+ - 2838393 [info] Found ttyUSB0
+ - 2838393 [info] Found ttyS0
+ - 2838393 [info] Using ttyUSB0
+ - 2838393 [info] Port ttyUSB0
+ - 2838393 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 2838393 [info] Sectors to upload: 19
+ - 2838393 [info] File size bytes: 1241804
+ - 2105987 [info] Starting STUMP Loader
+ - 2105987 [info] No serial port specified
+ - 2105987 [info] Searching for ports...
+ - 2105987 [info] Found ttyUSB0
+ - 2105987 [info] Found ttyS4
+ - 2105987 [info] Found ttyS0
+ - 2105987 [info] Using ttyUSB0
+ - 2105987 [info] Port ttyUSB0
+ - 2105987 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 2105987 [info] Sectors to upload: 19
+ - 2105987 [info] File size bytes: 1241804
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 32 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 33 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 34 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 35 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 36 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 37 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 38 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 39 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 40 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 41 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 42 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 43 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 44 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 45 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 46 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 47 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 48 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 49 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Board said: R
+ - 2105987 [info] Writing sector 50 total size 65537
+ - 2105987 [info] Board said: P
+ - 2105987 [info] Starting warm boot 
+ - 651867 [info] Starting STUMP Loader
+ - 651867 [info] No serial port specified
+ - 651867 [info] Searching for ports...
+ - 651867 [info] Found ttyUSB0
+ - 651867 [info] Found ttyS4
+ - 651867 [info] Found ttyS0
+ - 651867 [info] Using ttyUSB0
+ - 651867 [info] Port ttyUSB0
+ - 651867 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 651867 [info] Sectors to upload: 19
+ - 651867 [info] File size bytes: 1241804
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 32 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 33 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 34 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 35 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 36 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 37 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 38 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 39 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 40 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 41 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 42 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 43 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 44 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 45 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 46 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 47 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 48 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 49 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Board said: R
+ - 651867 [info] Writing sector 50 total size 65537
+ - 651867 [info] Board said: P
+ - 651867 [info] Starting warm boot 
+ - 711805 [info] Starting STUMP Loader
+ - 711805 [info] No serial port specified
+ - 711805 [info] Searching for ports...
+ - 711805 [info] Found ttyUSB0
+ - 711805 [info] Found ttyS4
+ - 711805 [info] Found ttyS0
+ - 711805 [info] Using ttyUSB0
+ - 711805 [info] Port ttyUSB0
+ - 711805 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 711805 [info] Sectors to upload: 19
+ - 711805 [info] File size bytes: 1241804
+ - 713980 [info] Starting STUMP Loader
+ - 713980 [info] No serial port specified
+ - 713980 [info] Searching for ports...
+ - 713980 [info] Found ttyUSB0
+ - 713980 [info] Found ttyS4
+ - 713980 [info] Found ttyS0
+ - 713980 [info] Using ttyUSB0
+ - 713980 [info] Port ttyUSB0
+ - 713980 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 713980 [info] Sectors to upload: 19
+ - 713980 [info] File size bytes: 1241804
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 32 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 33 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 34 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 35 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 36 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 37 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 38 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 39 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 40 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 41 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 42 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 43 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 44 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 45 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 46 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 47 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 48 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 49 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Board said: R
+ - 713980 [info] Writing sector 50 total size 65537
+ - 713980 [info] Board said: P
+ - 713980 [info] Starting warm boot 
+ - 760613 [info] Starting STUMP Loader
+ - 760613 [info] No serial port specified
+ - 760613 [info] Searching for ports...
+ - 760613 [info] Found ttyUSB0
+ - 760613 [info] Found ttyS4
+ - 760613 [info] Found ttyS0
+ - 760613 [info] Using ttyUSB0
+ - 760613 [info] Port ttyUSB0
+ - 760613 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 760613 [info] Sectors to upload: 19
+ - 760613 [info] File size bytes: 1241804
+ - 762359 [info] Starting STUMP Loader
+ - 762359 [info] No serial port specified
+ - 762359 [info] Searching for ports...
+ - 762359 [info] Found ttyUSB0
+ - 762359 [info] Found ttyS4
+ - 762359 [info] Found ttyS0
+ - 762359 [info] Using ttyUSB0
+ - 762359 [info] Port ttyUSB0
+ - 762359 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 762359 [info] Sectors to upload: 19
+ - 762359 [info] File size bytes: 1241804
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 32 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 33 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 34 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 35 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 36 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 37 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 38 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 39 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 40 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 41 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 42 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 43 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 44 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 45 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 46 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 47 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 48 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 49 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Board said: R
+ - 762359 [info] Writing sector 50 total size 65537
+ - 762359 [info] Board said: P
+ - 762359 [info] Starting warm boot 
+ - 767811 [info] Starting STUMP Loader
+ - 767811 [info] No serial port specified
+ - 767811 [info] Searching for ports...
+ - 767811 [info] Found ttyUSB0
+ - 767811 [info] Found ttyS4
+ - 767811 [info] Found ttyS0
+ - 767811 [info] Using ttyUSB0
+ - 767811 [info] Port ttyUSB0
+ - 767811 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 767811 [info] Sectors to upload: 19
+ - 767811 [info] File size bytes: 1241804
+ - 768934 [info] Starting STUMP Loader
+ - 768934 [info] No serial port specified
+ - 768934 [info] Searching for ports...
+ - 768934 [info] Found ttyUSB0
+ - 768934 [info] Found ttyS4
+ - 768934 [info] Found ttyS0
+ - 768934 [info] Using ttyUSB0
+ - 768934 [info] Port ttyUSB0
+ - 768934 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 768934 [info] Sectors to upload: 19
+ - 768934 [info] File size bytes: 1241804
+ - 769400 [info] Starting STUMP Loader
+ - 769400 [info] No serial port specified
+ - 769400 [info] Searching for ports...
+ - 769400 [info] Found ttyUSB1
+ - 769400 [info] Found ttyS4
+ - 769400 [info] Found ttyS0
+ - 769400 [info] Using ttyUSB1
+ - 769400 [info] Port ttyUSB1
+ - 769400 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 769400 [info] Sectors to upload: 19
+ - 769400 [info] File size bytes: 1241804
+ - 769830 [info] Starting STUMP Loader
+ - 769830 [info] No serial port specified
+ - 769830 [info] Searching for ports...
+ - 769830 [info] Found ttyUSB1
+ - 769830 [info] Found ttyS4
+ - 769830 [info] Found ttyS0
+ - 769830 [info] Using ttyUSB1
+ - 769830 [info] Port ttyUSB1
+ - 769830 [info] File /home/y26054md/Questa/COMP12111/synthesis/MU0_Board/MU0_Board.bin
+ - 769830 [info] Sectors to upload: 19
+ - 769830 [info] File size bytes: 1241804
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 32 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 33 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 34 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 35 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 36 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 37 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 38 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 39 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 40 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 41 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 42 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 43 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 44 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 45 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 46 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 47 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 48 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 49 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Board said: R
+ - 769830 [info] Writing sector 50 total size 65537
+ - 769830 [info] Board said: P
+ - 769830 [info] Starting warm boot 
